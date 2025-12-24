@@ -2058,10 +2058,11 @@
             </div>
           </div>
           <div class="portal-visual">
-            <div class="portal-visual-inner" data-aos="zoom-in" data-aos-duration="1000">
+            <div class="portal-visual-inner" id="portal-visual-trigger" data-aos="zoom-in" data-aos-duration="1000">
               <img src="assets/images/apps/portal/front.png" alt="Portal Dashboard" class="portal-screenshot">
               <div class="video-play-overlay">
-                <a href="https://www.youtube.com/watch?v=PLACEHOLDER" class="play-btn-pulse open-video-popup"
+                <!-- Inline Video Trigger -->
+                <a href="javascript:void(0);" onclick="playPortalInline()" class="play-btn-pulse"
                   title="Watch Walkthrough">
                   <i class="fa-solid fa-play"></i>
                 </a>
@@ -2071,6 +2072,17 @@
         </div>
       </div>
     </section>
+
+    <script>
+      function playPortalInline() {
+        var container = document.getElementById('portal-visual-trigger');
+        // Placeholder ID - User to provide
+        var videoId = "PLACEHOLDER";
+
+        container.classList.add('is-playing');
+        container.innerHTML = '<iframe class="portal-video-iframe" src="https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0" title="Portal Walkthrough" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+      }
+    </script>
     <!-- ==== / Portal Section End ==== -->
     <!-- ==== community section start ====
       <section class="community">
