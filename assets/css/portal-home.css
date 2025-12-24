@@ -1,0 +1,212 @@
+/* Portal Section Styles */
+.portal-section {
+    position: relative;
+    padding: 120px 0;
+    background: #f9f9f9;
+    overflow: hidden;
+}
+
+.portal-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.portal-content {
+    flex: 1;
+    z-index: 2;
+}
+
+.portal-subtitle {
+    display: inline-block;
+    padding: 8px 16px;
+    background: rgba(var(--primary-color-rgb), 0.1);
+    color: var(--primary-color, #D72323);
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    margin-left: 5px;
+}
+
+.portal-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    color: #1a1a1a;
+}
+
+.portal-title span {
+    position: relative;
+    display: inline-block;
+    color: var(--primary-color, #D72323);
+}
+
+.portal-title span::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    width: 100%;
+    height: 8px;
+    background: rgba(var(--primary-color-rgb), 0.2);
+    z-index: -1;
+}
+
+.portal-description {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 35px;
+}
+
+.portal-features {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.portal-feature-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: 500;
+    color: #333;
+}
+
+.portal-feature-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color, #D72323);
+    font-size: 1.1rem;
+}
+
+.portal-visual {
+    flex: 1;
+    position: relative;
+    z-index: 1;
+}
+
+.portal-visual-inner {
+    position: relative;
+    padding: 20px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #ffffff, #f0f0f0);
+    box-shadow: 0 40px 80px rgba(0,0,0,0.1);
+    transform: perspective(1000px) rotateY(-5deg);
+    transition: transform 0.5s ease;
+}
+
+.portal-visual-inner:hover {
+    transform: perspective(1000px) rotateY(0deg);
+}
+
+.portal-screenshot {
+    width: 100%;
+    border-radius: 20px;
+    display: block;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.video-play-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.play-btn-pulse {
+    width: 80px;
+    height: 80px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color, #D72323);
+    font-size: 1.8rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none !important;
+}
+
+.play-btn-pulse:hover {
+    transform: scale(1.1);
+    color: var(--primary-color, #D72323);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+.play-btn-pulse::before,
+.play-btn-pulse::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.6);
+    z-index: -1;
+    animation: pulse 2s infinite;
+}
+
+.play-btn-pulse::after {
+    animation-delay: 0.5s;
+    background: rgba(255, 255, 255, 0.4);
+}
+
+@keyframes pulse {
+    0% {
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+    }
+    100% {
+        width: 200%;
+        height: 200%;
+        opacity: 0;
+    }
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .portal-wrapper {
+        flex-direction: column-reverse;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .portal-subtitle {
+        margin-left: 0;
+    }
+    
+    .portal-title {
+        font-size: 2.5rem;
+    }
+    
+    .portal-visual-inner {
+        transform: none;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+    .portal-visual-inner:hover {
+        transform: none;
+    }
+    
+    .portal-features {
+        align-items: center;
+    }
+}
