@@ -1,0 +1,1364 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- required meta -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- #favicon -->
+  <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon" />
+  <link rel="icon" href="../assets/images/favicon.png" type="image/x-icon" />
+  <!-- #title -->
+  <title>
+    Bloodlink | Linking veins, Saving lives | Family & Fellows Foundation
+  </title>
+  <!-- #keywords -->
+  <meta name="keywords"
+    content="Bloodlink, blood donation, android app, Family & Fellows Foundation, blood donor, emergency blood" />
+  <!-- #description -->
+  <meta name="description"
+    content="Bloodlink - The official Android app by Family & Fellows Foundation for efficient blood donation and receiving. Linking veins, saving lives." />
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&display=swap"
+    rel="stylesheet" />
+  <!-- main css -->
+  <link rel="stylesheet" href="../assets/css/main.css" />
+  <!-- responsive css -->
+  <link rel="stylesheet" href="../assets/css/responsive.css" />
+  <!-- color themes -->
+  <link rel="stylesheet" href="../assets/css/default-theme.css" id="switch-color" />
+  <!-- want sticky header -->
+  <link rel="stylesheet" href="../assets/css/sticky-header.css" />
+  <!-- box layout css -->
+  <link rel="stylesheet" href="../assets/css/box-layout.css" />
+  <!-- dark mode css -->
+  <link rel="stylesheet" href="../assets/css/dark-mode.css" />
+  <!-- rtl css -->
+  <link rel="stylesheet" href="../assets/css/rtl.css" />
+
+  <!-- Custom Styles for Bloodlink Landing Page -->
+  <style>
+    /* Bloodlink Hero Section */
+    .bloodlink-hero {
+      position: relative;
+      padding: 180px 0 120px;
+      background: radial-gradient(circle at top right, rgba(215, 35, 35, 0.04) 0%, transparent 45%),
+        radial-gradient(circle at bottom left, rgba(215, 35, 35, 0.04) 0%, transparent 45%),
+        linear-gradient(to bottom, #ffffff, #fafafa);
+      overflow: hidden;
+    }
+
+    .bloodlink-hero::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-image: url('../assets/images/banner/banner-three-bg.png');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.1;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .bloodlink-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-subtitle {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      color: #D72323;
+      background: rgba(215, 35, 35, 0.1);
+      padding: 8px 20px;
+      border-radius: 30px;
+      margin-bottom: 25px;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .hero-subtitle i {
+      font-size: 1.1rem;
+    }
+
+    .bloodlink-title {
+      font-size: 4rem;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 25px;
+      color: #1a1a1a;
+      letter-spacing: -1px;
+    }
+
+    .text-highlight {
+      color: #D72323;
+      position: relative;
+      display: inline-block;
+    }
+
+    .text-highlight::after {
+      content: '';
+      position: absolute;
+      bottom: 5px;
+      left: 0;
+      width: 100%;
+      height: 12px;
+      background: rgba(215, 35, 35, 0.15);
+      z-index: -1;
+      transform: skewX(-15deg);
+    }
+
+    .hero-desc {
+      font-size: 1.25rem;
+      color: #555;
+      margin-bottom: 40px;
+      max-width: 90%;
+      line-height: 1.6;
+    }
+
+    /* Floating Animation for App Mockup */
+    .floating-animate {
+      animation: float 6s ease-in-out infinite;
+      position: relative;
+      z-index: 2;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-25px);
+      }
+
+      100% {
+        transform: translateY(0px);
+      }
+    }
+
+    .app-mockup-shadow {
+      filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.15));
+    }
+
+    /* Premium Buttons */
+    .download-btn-group {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn-premium {
+      padding: 16px 32px;
+      border-radius: 50px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+    }
+
+    .btn-premium i {
+      font-size: 1.4rem;
+    }
+
+    .btn-android {
+      background: #D72323;
+      color: #fff;
+      box-shadow: 0 10px 25px rgba(215, 35, 35, 0.3);
+    }
+
+    .btn-android:hover {
+      background: #b51b1b;
+      transform: translateY(-4px);
+      box-shadow: 0 15px 35px rgba(215, 35, 35, 0.4);
+      color: #fff;
+    }
+
+    .btn-google {
+      background: #1a1a1a;
+      color: #fff;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-google:hover {
+      background: #000;
+      transform: translateY(-4px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+      color: #fff;
+    }
+
+    /* Premium Feature Cards */
+    .feature-card-premium {
+      background: #fff;
+      padding: 45px 35px;
+      border-radius: 24px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.04);
+      border: 1px solid rgba(0, 0, 0, 0.03);
+      transition: all 0.3s ease;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      transform-style: preserve-3d;
+      transform: perspective(1000px);
+    }
+
+    .feature-card-premium::before {
+      content: '';
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      background: rgba(215, 35, 35, 0.03);
+      border-radius: 50%;
+      top: -50px;
+      right: -50px;
+      transition: all 0.5s ease;
+    }
+
+    .feature-card-premium:hover::before {
+      transform: scale(1.5);
+      background: rgba(215, 35, 35, 0.05);
+    }
+
+    .feature-icon-box {
+      width: 70px;
+      height: 70px;
+      background: linear-gradient(135deg, rgba(215, 35, 35, 0.1) 0%, rgba(215, 35, 35, 0.05) 100%);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 30px;
+      transition: transform 0.3s ease;
+      transform: translateZ(20px);
+    }
+
+    .feature-card-premium:hover .feature-icon-box {
+      transform: translateZ(30px) scale(1.1) rotate(5deg);
+      background: linear-gradient(135deg, rgba(215, 35, 35, 0.2) 0%, rgba(215, 35, 35, 0.1) 100%);
+    }
+
+    .feature-icon-box i {
+      font-size: 28px;
+      color: #D72323;
+    }
+
+    .feature-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+      color: #1a1a1a;
+      transform: translateZ(10px);
+    }
+
+    .feature-desc {
+      color: #666;
+      line-height: 1.6;
+      transform: translateZ(5px);
+    }
+
+    /* Showcase Section Enhancements */
+    .app-showcase-list {
+      margin-top: 30px;
+    }
+
+    .app-showcase-list li {
+      margin-bottom: 20px;
+      font-size: 1.15rem;
+      display: flex;
+      align-items: center;
+      color: #333;
+      font-weight: 500;
+      padding: 10px 20px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+      transition: transform 0.3s ease;
+    }
+
+    .app-showcase-list li:hover {
+      transform: translateX(10px);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    .app-showcase-list li i {
+      margin-right: 15px;
+      color: #fff;
+      font-size: 0.9rem;
+      background: #D72323;
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 991px) {
+      .bloodlink-hero {
+        padding-top: 140px;
+        text-align: center;
+      }
+
+      .hero-desc {
+        margin: 0 auto 40px;
+      }
+
+      .banner-three__thumb {
+        margin-top: 60px;
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .download-btn-group {
+        justify-content: center;
+      }
+
+      .bloodlink-title {
+        font-size: 3rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .bloodlink-title {
+        font-size: 2.5rem;
+      }
+
+      .btn-premium {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    /* Gamification Section */
+    .gamification-section {
+      background: radial-gradient(circle at center, #2a2a2a 0%, #1a1a1a 100%);
+      padding: 100px 0;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .badge-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 40px 20px;
+      text-align: center;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+      height: 100%;
+    }
+
+    .badge-card:hover {
+      transform: translateY(-10px);
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .badge-icon {
+      font-size: 4rem;
+      margin-bottom: 25px;
+      background: -webkit-linear-gradient(#eee, #333);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+      display: inline-block;
+    }
+
+    .tier-bronze .badge-icon {
+      background: linear-gradient(135deg, #cd7f32 0%, #8c5a2b 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .tier-silver .badge-icon {
+      background: linear-gradient(135deg, #e3e3e3 0%, #909090 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .tier-gold .badge-icon {
+      background: linear-gradient(135deg, #ffd700 0%, #b8860b 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .badge-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .badge-req {
+      color: #ddd;
+      font-size: 1.2rem;
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+
+    .badge-desc {
+      color: #aaa;
+      font-size: 0.95rem;
+    }
+
+    /* Screen Gallery Section */
+    .app-gallery-section {
+      padding: 80px 0 100px;
+      background: #f4f4f4;
+      /* Slight contrast */
+      overflow: hidden;
+    }
+
+    .swiper-gallery {
+      width: 100%;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    .swiper-gallery .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 320px;
+      height: 650px;
+      /* Fixed height for consistent phone look */
+      border-radius: 35px;
+      /* Rounded corners like modern phones */
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      border: 12px solid #222;
+      /* Phone bezel */
+      overflow: hidden;
+      position: relative;
+      background: #000;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .swiper-gallery .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+      /* Ensure full image is visible */
+    }
+
+    .slide-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px 10px;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+      color: #fff;
+      text-align: center;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 1.1rem;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .swiper-slide-active .slide-caption {
+      opacity: 1;
+    }
+
+    /* Process / How It Works */
+    .process-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 40px 30px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+      height: 100%;
+      border: 1px solid #f0f0f0;
+      position: relative;
+    }
+
+    .process-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(215, 35, 35, 0.1);
+      border-color: #ffe0e0;
+    }
+
+    .process-icon {
+      width: 80px;
+      height: 80px;
+      background: #fff5f5;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 25px;
+      color: #D72323;
+      font-size: 2rem;
+      transition: all 0.3s ease;
+    }
+
+    .process-card:hover .process-icon {
+      background: #D72323;
+      color: #fff;
+      transform: rotateY(180deg);
+    }
+
+    .process-step {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-weight: 800;
+      font-size: 3rem;
+      color: #f9f9f9;
+      line-height: 1;
+      z-index: 0;
+    }
+
+    .process-title {
+      font-weight: 700;
+      margin-bottom: 15px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .process-desc {
+      color: #666;
+      font-size: 0.95rem;
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <!--[if lt IE 9]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+        your experience and security.
+      </p>
+    <![endif]-->
+  <div class="page-wrapper">
+    <!-- ==== topbar start ==== -->
+    <div class="topbar topbar--secondary d-none d-lg-block">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="topbar__inner">
+              <div class="row align-items-center">
+                <div class="col-12 col-lg-6 col-xxl-4">
+                  <div class="topbar__list-wrapper">
+                    <ul class="topbar__list">
+                      <li>
+                        <a href="mailto:info@familyandfellowsfoundation.org"><i
+                            class="fa-regular fa-envelope"></i>info@familyandfellowsfoundation.org</a>
+                      </li>
+                      <li>
+                        <a href="tel:+923268484360"><i class="fa-solid fa-phone"></i>+92 326 8484360</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-12 col-xxl-4 d-none d-xxl-block">
+                  <div class="topbar__extra text-center">
+                    <p>
+                      <i class="icon-heart-hand"></i> Together we can make a
+                      difference. Join us in our mission!
+                    </p>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-6 col-xxl-4">
+                  <div class="topbar__items justify-content-end">
+                    <div class="social">
+                      <a href="https://www.instagram.com/family_and_fellows_foundation/#" target="_blank"
+                        aria-label="share us on instagram" title="instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                      </a>
+                      <a href="https://www.tiktok.com/@family.and.fellow" target="_blank"
+                        aria-label="share us on tiktok" title="tiktok">
+                        <i class="fa-brands fa-tiktok"></i>
+                      </a>
+                      <a href="https://x.com/familyandfellow" target="_blank" aria-label="share us on twitter"
+                        title="twitter">
+                        <i class="fa-brands fa-twitter"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ==== / topbar end ==== -->
+    <!-- ==== header start ==== -->
+    <header class="header header-secondary">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="main-header__menu-box">
+              <nav class="navbar p-0">
+                <div class="navbar-logo">
+                  <a href="../">
+                    <img src="../assets/images/logo.png" alt="Image" />
+                  </a>
+                </div>
+                <div class="navbar__menu-wrapper">
+                  <div class="navbar__menu d-none d-xl-block">
+                    <ul class="navbar__list">
+                      <li class="navbar__item nav-fade">
+                        <a href="../">Home</a>
+                      </li>
+                      <li class="navbar__item nav-fade">
+                        <a href="../about/">About Us</a>
+                      </li>
+                      <li class="navbar__item navbar__item--has-children nav-fade">
+                        <a href="../our-causes/" aria-label="dropdown menu"
+                          class="navbar__dropdown-label dropdown-label-alter">Causes</a>
+                        <ul class="navbar__sub-menu">
+                          <li><a href="../our-causes/education/">Education</a></li>
+                          <li><a href="../our-causes/health-care/">Health Care</a></li>
+                          <li><a href="../our-causes/food-for-all/">Food For All</a></li>
+                          <li><a href="../our-causes/disaster-management/">Disaster Management</a></li>
+                          <li><a href="../our-causes/social-welfare/marriage-assistance-details/">Social Welfare</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="navbar__item nav-fade">
+                        <a href="../become-volunteer/">Become a Volunteer</a>
+                      </li>
+                      <li class="navbar__item nav-fade">
+                        <a href="../blogs/">Blogs</a>
+                      </li>
+                      <li class="navbar__item navbar__item--has-children nav-fade">
+                        <a href="#" aria-label="dropdown menu"
+                          class="navbar__dropdown-label dropdown-label-alter">App</a>
+                        <ul class="navbar__sub-menu">
+                          <li><a href="../bloodlink/">Bloodlink</a></li>
+                        </ul>
+                      </li>
+                      <li class="navbar__item nav-fade">
+                        <a href="../contact/">Contact Us</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="contact-btn">
+                    <div class="contact-icon">
+                      <i class="icon-support"></i>
+                    </div>
+                    <div class="contact-content">
+                      <p>Call Us Now</p>
+                      <a href="tel:+923268484360">+92 326 8484360</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="navbar__options">
+                  <div class="navbar__mobile-options">
+                    <a href="https://wa.link/nidmkf" class="btn--primary d-none d-md-flex">Donate Now <i
+                        class="fa-solid fa-arrow-right"></i></a>
+                  </div>
+                  <button class="open-offcanvas-nav d-flex d-xl-none" aria-label="toggle mobile menu"
+                    title="open offcanvas menu">
+                    <span class="icon-bar top-bar"></span>
+                    <span class="icon-bar middle-bar"></span>
+                    <span class="icon-bar bottom-bar"></span>
+                  </button>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- ==== / header end ==== -->
+    <!-- ==== mobile menu start ==== -->
+    <div class="mobile-menu mobile-menu--primary d-block d-xxl-none">
+      <nav class="mobile-menu__wrapper">
+        <div class="mobile-menu__header nav-fade">
+          <div class="logo">
+            <a href="../" aria-label="home page" title="logo">
+              <img src="../assets/images/apps/blood-link-app/logo-bloodlink.png" alt="Bloodlink by FNFF" />
+            </a>
+          </div>
+          <button aria-label="close mobile menu" class="close-mobile-menu">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <div class="mobile-menu__list"></div>
+        <div class="mobile-menu__cta nav-fade d-block d-md-none">
+          <a href="https://wa.link/nidmkf" class="btn--primary">Donate Now <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="mobile-menu__social social nav-fade">
+          <a href="https://www.instagram.com/family_and_fellows_foundation/#" target="_blank"
+            aria-label="share us on facebook" title="facebook">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://www.tiktok.com/@family.and.fellow" target="_blank" aria-label="share us on vimeo"
+            title="vimeo">
+            <i class="fa-brands fa-tiktok"></i>
+          </a>
+          <a href="https://x.com/familyandfellow" target="_blank" aria-label="share us on twitter" title="twitter">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+        </div>
+      </nav>
+    </div>
+    <div class="mobile-menu__backdrop"></div>
+    <!-- ==== / mobile menu end ==== -->
+
+    <!-- ==== Bloodlink Hero Section Start ==== -->
+    <section class="bloodlink-hero">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 col-lg-7">
+            <div class="bloodlink-content">
+              <span class="hero-subtitle" data-aos="fade-down" data-aos-delay="100">
+                <img src="../assets/images/apps/blood-link-app/logo-bloodlink.png" alt="Bloodlink"
+                  style="height: 30px; margin-right: 10px; vertical-align: middle;"> Official Android App
+              </span>
+              <h1 class="bloodlink-title" data-aos="fade-up" data-aos-delay="200">
+                Linking Veins, <br>
+                <span class="text-highlight">Saving Lives</span>
+              </h1>
+              <p class="hero-desc" data-aos="fade-up" data-aos-delay="300">
+                Connecting verified blood donors with recipients in need. Built by the Family & Fellows Foundation,
+                Blood Link promotes transparent, community-driven donation with smart location-based matching.
+              </p>
+              <div class="download-btn-group" data-aos="fade-up" data-aos-delay="400">
+                <a href="#" class="btn-premium btn-android">
+                  <i class="fa-brands fa-android"></i> Download APK <span style="font-size:0.7em; opacity: 0.8;">(Coming
+                    Soon)</span>
+                </a>
+                <a href="https://play.google.com/apps/internaltest/4701348834146195178" class="btn-premium btn-google"
+                  target="_blank">
+                  <i class="fa-brands fa-google-play"></i> Google Play
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-5">
+            <div class="banner-three__thumb floating-animate">
+              <!-- Animated Image/Mockup -->
+              <!-- Using the same placeholder content but styled.
+                   Ideally this should be a transparent PNG of the phone mockup -->
+              <img src="../assets/images/apps/blood-link-app/donation-request-map-view.jpeg"
+                alt="Bloodlink App Dashboard" class="app-mockup-shadow"
+                style="border-radius: 20px; width: 100%; max-width: 380px; display: block; margin: 0 auto; transform: rotate(-5deg); border: 8px solid #1a1a1a;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ==== / Bloodlink Hero Section End ==== -->
+
+    <!-- ==== How It Works / Ecosystem Section Start ==== -->
+    <section class="section-space" style="background: #fafafa;">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-8">
+            <div class="section__header text-center" style="margin-bottom: 60px;">
+              <span class="sub-title-two" style="color: #D72323;">How It Works</span>
+              <h2 class="title-animation">The Donation Ecosystem</h2>
+              <p style="max-width: 600px; margin: 15px auto 0;">Connecting those in need with those who can help,
+                securely and transparently.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row gutter-30">
+          <!-- Step 1: Recipient -->
+          <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="process-card">
+              <div class="process-step">01</div>
+              <div class="process-icon">
+                <i class="fa-solid fa-hand-holding-heart"></i>
+              </div>
+              <h4 class="process-title">Request Blood</h4>
+              <p class="process-desc">Recipients create a verified request for themselves or a loved one, specifying
+                blood type and urgency.</p>
+            </div>
+          </div>
+          <!-- Step 2: Foundation (Admin) -->
+          <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="process-card">
+              <div class="process-step">02</div>
+              <div class="process-icon">
+                <i class="fa-solid fa-file-shield"></i>
+              </div>
+              <h4 class="process-title">Staff Verification</h4>
+              <p class="process-desc">Foundation staff reviews every request via the admin dashboard to ensure
+                authenticity and integrity.</p>
+            </div>
+          </div>
+          <!-- Step 3: Donor -->
+          <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="process-card">
+              <div class="process-step">03</div>
+              <div class="process-icon">
+                <i class="fa-solid fa-person-running"></i>
+              </div>
+              <h4 class="process-title">Donor Action</h4>
+              <p class="process-desc">Verified donors within 5-20km receive instant alerts, view the request, and
+                proceed to save a life.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ==== / How It Works / Ecosystem Section End ==== -->
+
+    <!-- ==== Features Section Start ==== -->
+    <section class="service-three section-space" style="background: #fff;">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-8">
+            <div class="section__header text-center" style="margin-bottom: 60px;">
+              <span class="sub-title-two" style="color: #D72323;">Combined Features</span>
+              <h2 class="title-animation">Simplicity Meets Power</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row gutter-30">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="feature-card-premium" data-tilt data-aos="fade-up" data-aos-delay="100">
+              <div class="feature-icon-box">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <h5 class="feature-title">Location Discovery</h5>
+              <p class="feature-desc">Find verified requests nearby with configurable 5km, 10km, or 20km detection
+                radius.</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="feature-card-premium" data-tilt data-aos="fade-up" data-aos-delay="200">
+              <div class="feature-icon-box">
+                <i class="fa-solid fa-droplet"></i>
+              </div>
+              <h5 class="feature-title">Smart Matching</h5>
+              <p class="feature-desc">Intelligent filtering ensures donors only see requests compatible with their blood
+                type.</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="feature-card-premium" data-tilt data-aos="fade-up" data-aos-delay="300">
+              <div class="feature-icon-box">
+                <i class="fa-solid fa-bell"></i>
+              </div>
+              <h5 class="feature-title">Instant Alerts</h5>
+              <p class="feature-desc">Get immediate Firebase push notifications when a verified request matches your
+                profile.</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="feature-card-premium" data-tilt data-aos="fade-up" data-aos-delay="400">
+              <div class="feature-icon-box">
+                <i class="fa-solid fa-user-check"></i>
+              </div>
+              <h5 class="feature-title">Trust & Verify</h5>
+              <p class="feature-desc">Strict profile verification and request validation by foundation staff.</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="feature-card-premium" data-tilt data-aos="fade-up" data-aos-delay="500">
+              <div class="feature-icon-box">
+                <i class="fa-solid fa-hourglass-half"></i>
+              </div>
+              <h5 class="feature-title">Safety Cooldown</h5>
+              <p class="feature-desc">Automatic 3-month waiting period enforcement to ensure donor health and safety.
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="feature-card-premium" data-tilt data-aos="fade-up" data-aos-delay="600">
+              <div class="feature-icon-box">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+              <h5 class="feature-title">Impact Tracking</h5>
+              <p class="feature-desc">Track your net contribution score: total donations made minus requests created.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ==== / Features Section End ==== -->
+
+    <!-- ==== Gamification / Donor Levels Section Start ==== -->
+    <section class="gamification-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-8">
+            <div class="section__header text-center" style="margin-bottom: 60px;">
+              <span class="sub-title-two" style="color: #D72323;">Recognition</span>
+              <h2 class="title-animation" style="color: #fff;">Donor Recognition Tiers</h2>
+              <p style="color: #bbb; margin-top: 15px;">Earn badges and leveling upgrades as you save more lives.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row gutter-30">
+          <div class="col-12 col-lg-4">
+            <div class="badge-card tier-bronze" data-tilt data-aos="fade-up" data-aos-delay="100">
+              <div class="badge-icon">
+                <i class="fa-solid fa-medal"></i>
+              </div>
+              <h3 class="badge-title">Bronze Donor</h3>
+              <div class="badge-req">5+ Donations</div>
+              <p class="badge-desc">The start of a heroic journey.</p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="badge-card tier-silver" data-tilt data-aos="fade-up" data-aos-delay="200">
+              <div class="badge-icon">
+                <i class="fa-solid fa-medal"></i>
+              </div>
+              <h3 class="badge-title">Silver Donor</h3>
+              <div class="badge-req">10+ Donations</div>
+              <p class="badge-desc">A committed guardian of life.</p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="badge-card tier-gold" data-tilt data-aos="fade-up" data-aos-delay="300">
+              <div class="badge-icon">
+                <i class="fa-solid fa-crown"></i>
+              </div>
+              <h3 class="badge-title">Gold Donor</h3>
+              <div class="badge-req">20+ Donations</div>
+              <p class="badge-desc">The ultimate symbol of selflessness.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ==== / Gamification / Donor Levels Section End ==== -->
+
+    <!-- ==== App Gallery Section Start ==== -->
+    <section class="app-gallery-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-8">
+            <div class="section__header text-center" style="margin-bottom: 40px;">
+              <span class="sub-title-two" style="color: #D72323;">App Interface</span>
+              <h2 class="title-animation">Visual Walkthrough</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper swiper-gallery">
+        <div class="swiper-wrapper">
+          <!-- 1. Sign In / Onboarding -->
+          <div class="swiper-slide">
+            <img src="../assets/images/apps/blood-link-app/signin-signup.jpeg" alt="Sign In">
+            <div class="slide-caption">Secure Sign In</div>
+          </div>
+          <!-- 2. Dashboard -->
+          <div class="swiper-slide">
+            <img src="../assets/images/apps/blood-link-app/my-dashboard-preview.jpeg" alt="Dashboard">
+            <div class="slide-caption">Donor Dashboard</div>
+          </div>
+          <!-- 3. Shortcuts / Nav -->
+          <div class="swiper-slide">
+            <img src="../assets/images/apps/blood-link-app/pages-shortcut.jpeg" alt="Quick Access">
+            <div class="slide-caption">Quick Access Menu</div>
+          </div>
+          <!-- 4. Map View (Discovery) -->
+          <div class="swiper-slide">
+            <img src="../assets/images/apps/blood-link-app/donation-request-map-view.jpeg" alt="Map View">
+            <div class="slide-caption">Find Nearby Requests</div>
+          </div>
+          <!-- 5. Request Details -->
+          <div class="swiper-slide">
+            <img src="../assets/images/apps/blood-link-app/blood-request-detail.jpeg" alt="Request Detail">
+            <div class="slide-caption">Request Details</div>
+          </div>
+          <!-- 6. Donating / Community -->
+          <div class="swiper-slide">
+            <img src="../assets/images/apps/blood-link-app/community-contribute-page.jpeg" alt="Community">
+            <div class="slide-caption">Community Support</div>
+          </div>
+          <!-- 7. My Donations -->
+          <div class="swiper-slide">
+            <img src="../assets/images/apps/blood-link-app/my-donation-page.jpeg" alt="Donation Page">
+            <div class="slide-caption">Track History</div>
+          </div>
+          <!-- 8. Profile -->
+          <div class="swiper-slide">
+            <img src="../assets/images/apps/blood-link-app/my-profile.jpeg" alt="Profile">
+            <div class="slide-caption">User Profile</div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+    <!-- ==== / App Gallery Section End ==== -->
+
+    <!-- ==== App Showcase Section Start ==== -->
+    <section class="about-us-three section-space" style="background: #f9f9f9; padding-bottom: 100px;">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 col-lg-6">
+            <div class="about-us-three__thumb" data-aos="fade-right" data-aos-duration="1000">
+              <!-- Placeholder for detailed app showcase image -->
+              <img src="../assets/images/apps/blood-link-app/my-donation-page.jpeg" alt="Bloodlink App Showcase"
+                style="width: 100%; max-width: 450px; border-radius: 20px; border: 8px solid #fff; box-shadow: 0 20px 40px rgba(0,0,0,0.1);" />
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="about-us-three__content" style="padding-left: 20px;">
+              <span class="sub-title-two" style="color: #D72323;">Our Mission</span>
+              <h2 class="title-animation" style="margin-bottom: 30px;">Transparency & Trust</h2>
+              <p style="font-size: 1.1rem; color: #555; margin-bottom: 30px;">
+                Designed by the Family & Fellows Foundation, Blood Link addresses the critical challenge of connection.
+                We verify every request to ensure donation integrity, allowing donors to track their net contribution
+                score
+                and see the real impact of their generosity.
+              </p>
+
+              <ul class="app-showcase-list">
+                <li><i class="fa-solid fa-check"></i> Verified Requests & Profiles</li>
+                <li><i class="fa-solid fa-check"></i> Instant Push Notifications</li>
+                <li><i class="fa-solid fa-check"></i> 3-Month Donation Safety Cooldown</li>
+              </ul>
+
+              <div style="margin-top: 40px;">
+                <a href="../contact/" class="btn--secondary">Contact Support</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ==== / App Showcase Section End ==== -->
+
+
+    <!-- ==== footer start ==== -->
+    <footer class="footer-two">
+      <div class="container">
+        <div class="row align-items-center gutter-30">
+          <div class="col-12 col-lg-7 col-xxl-6">
+            <div class="footer-two__newsletter-content">
+              <h3 class="title-animation">Stay Connected With Our Mission</h3>
+              <p>Get updates on our latest projects and community impact</p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-5 col-xxl-5 offset-xxl-1">
+            <div class="footer-two__newsletter-form">
+              <form action="#" method="post">
+                <input type="email" required name="subscribe-email" id="subscribeEmail" placeholder="Enter Email" />
+                <button type="submit" aria-label="subscribe to our newsletter" title="subscribe to our newsletter"
+                  class="btn--primary">
+                  <i class="fa-solid fa-paper-plane"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <hr class="divider" />
+          </div>
+        </div>
+        <div class="row gutter-60">
+          <div class="col-12 col-md-6 col-xl-3">
+            <div class="footer-two__widget" data-aos="fade-up" data-aos-duration="1000">
+              <div class="footer-two__widget-logo">
+                <a href="../">
+                  <img src="../assets/images/logo-light.png" alt="Image" />
+                </a>
+              </div>
+              <div class="footer-two__widget-content">
+                <p>
+                  Family & Fellows Foundation is dedicated to empowering
+                  communities through Educational Excellence, Health Care
+                  Initiatives, and Food for All Programs.
+                </p>
+                <div class="social">
+                  <a href="https://www.instagram.com/family_and_fellows_foundation/#" target="_blank"
+                    aria-label="share us on instagram" title="instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                  <a href="https://www.tiktok.com/@family.and.fellow" target="_blank" aria-label="share us on tiktok"
+                    title="tiktok">
+                    <i class="fa-brands fa-tiktok"></i>
+                  </a>
+                  <a href="https://x.com/familyandfellow" target="_blank" aria-label="share us on twitter"
+                    title="twitter">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-xl-2 offset-xl-1">
+            <div class="footer-two__widget" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+              <div class="footer-two__widget-intro">
+                <h5>Quick Links</h5>
+                <div class="line">
+                  <span class="large-line"></span>
+                  <span class="small-line"></span>
+                  <span class="small-line"></span>
+                </div>
+              </div>
+              <div class="footer-two__widget-content">
+                <ul>
+                  <li><a href="../"><i class="fa-solid fa-arrow-right"></i>Home</a></li>
+                  <li><a href="../about/"><i class="fa-solid fa-arrow-right"></i>About Us</a></li>
+                  <li><a href="../become-volunteer/"><i class="fa-solid fa-arrow-right"></i>Become a Volunteer</a></li>
+                  <li><a href="../about/team/"><i class="fa-solid fa-arrow-right"></i>Team</a></li>
+                  <li><a href="../blogs/"><i class="fa-solid fa-arrow-right"></i>Blogs</a></li>
+                  <li><a href="../faq/"><i class="fa-solid fa-arrow-right"></i>FAQ</a></li>
+                  <li><a href="../shop/"><i class="fa-solid fa-arrow-right"></i>Shop</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-xl-3">
+            <div class="footer-two__widget footer-two__widget--alternate" data-aos="fade-up" data-aos-duration="1000"
+              data-aos-delay="400">
+              <div class="footer-two__widget-intro">
+                <h5>Our Causes</h5>
+                <div class="line">
+                  <span class="large-line"></span>
+                  <span class="small-line"></span>
+                  <span class="small-line"></span>
+                </div>
+              </div>
+              <div class="footer-two__widget-content">
+                <ul>
+                  <li><a href="../our-causes/education/"><i class="fa-solid fa-arrow-right"></i>Education Support</a>
+                  </li>
+                  <li><a href="../our-causes/food-for-all/"><i class="fa-solid fa-arrow-right"></i>Food Support</a></li>
+                  <li><a href="../our-causes/health-care/"><i class="fa-solid fa-arrow-right"></i>Health Support</a>
+                  </li>
+                  <li><a href="../our-causes/disaster-management/"><i class="fa-solid fa-arrow-right"></i>Disaster
+                      Management</a></li>
+                  <li><a href="../our-causes/social-welfare/marriage-assistance-details/"><i
+                        class="fa-solid fa-arrow-right"></i>Social Welfare</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-xl-3">
+            <div class="footer-two__widget footer-two__widget--alternate" data-aos="fade-up" data-aos-duration="1000"
+              data-aos-delay="600">
+              <div class="footer-two__widget-intro">
+                <h5>Get In Touch</h5>
+                <div class="line">
+                  <span class="large-line"></span>
+                  <span class="small-line"></span>
+                  <span class="small-line"></span>
+                </div>
+              </div>
+              <div class="footer-two__widget-content footer-two__widget-content--contact">
+                <ul>
+                  <li>
+                    <a href="https://www.google.com/maps/dir//Al-Syed,+Main+Peshawar+Rd,+Naseerabad,+Rawalpindi,+48000/@33.6202076,72.8973212,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x38df978a4048a751:0xef6767a9b7ee77c3!2m2!1d72.9797224!2d33.6202349?entry=ttu&amp;g_ep=EgoyMDI1MTEwMi4wIKXMDSoASAFQAw%3D%3D"
+                      target="_blank"><i class="fa-solid fa-location-dot"></i>Al-Syed, Main Peshawar Rd, Naseerabad,
+                      Rawalpindi, 48000, Pakistan</a>
+                  </li>
+                  <li><a href="tel:+923268484360"><i class="fa-solid fa-phone"></i>+92 326 8484360</a></li>
+                  <li><a href="mailto:info@familyandfellowsfoundation.org"><i
+                        class="fa-regular fa-envelope"></i>info@familyandfellowsfoundation.org</a></li>
+                  <li>
+                    <p>Registered with SECP Pakistan & Punjab Charity Commission</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-two__copyright">
+        <div class="container">
+          <div class="row align-items-center gutter-12">
+            <div class="col-12 col-lg-6">
+              <div class="footer-two__copyright-inner text-center text-lg-start">
+                <p>Copyright &copy; <span id="copyrightYear"></span> <a href="../">Family & Fellows Foundation</a>. All
+                  rights reserved.</p>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div class="footer__bottom-left">
+                <ul class="footer__bottom-list justify-content-center justify-content-lg-end">
+                  <li><a href="../terms-conditions/">Terms & Conditions</a></li>
+                  <li><a href="../privacy-policy/">Privacy Policy</a></li>
+                  <li><a href="../privacy-policy/">Cookie Settings</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sprade" data-aos="zoom-in" data-aos-duration="1000">
+        <img src="../assets/images/sprade.png" alt="Image" class="base-img" />
+      </div>
+      <div class="sprade-light" data-aos="zoom-in" data-aos-duration="1000">
+        <img src="../assets/images/sprade-light.png" alt="Image" />
+      </div>
+    </footer>
+    <!-- ==== / footer end ==== -->
+    <!-- ==== custom cursor start ==== -->
+    <div class="mouseCursor cursor-outer"></div>
+    <div class="mouseCursor cursor-inner"></div>
+    <!-- ==== / custom cursor end ==== -->
+    <!-- ==== scroll to top start ==== -->
+    <button class="progress-wrap" aria-label="scroll indicator" title="back to top">
+      <span></span>
+      <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+      </svg>
+    </button>
+    <!-- ==== / scroll to top end ==== -->
+    <!-- ==== color switcher start ==== -->
+    <div class="color-palate">
+      <button class="color-trigger">
+        <i class="fa-solid fa-gear"></i>
+      </button>
+      <button class="close-color-trigger">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="color-palate-inner">
+        <div class="various-color clearfix">
+          <h6>Multiple Colors</h6>
+          <br />
+          <div class="colors-list">
+            <span class="palate default-color active" data-theme-file="../assets/css/default-theme.css"></span>
+            <span class="palate blue-color" data-theme-file="../assets/css/blue-theme.css"></span>
+            <span class="palate brown-color" data-theme-file="../assets/css/brown-theme.css"></span>
+            <span class="palate green-color" data-theme-file="../assets/css/green-theme.css"></span>
+            <span class="palate orange-color" data-theme-file="../assets/css/orange-theme.css"></span>
+            <span class="palate purple-color" data-theme-file="../assets/css/purple-theme.css"></span>
+            <span class="palate teal-color" data-theme-file="../assets/css/teal-theme.css"></span>
+            <span class="palate yellow-color" data-theme-file="../assets/css/yellow-theme.css"></span>
+          </div>
+        </div>
+        <h6>RTL Version</h6>
+        <ul class="rtl-version option-box">
+          <li class="rtl">RTL Version</li>
+          <li>LTR Version</li>
+        </ul>
+        <h6>Boxed Version</h6>
+        <ul class="box-version option-box">
+          <li class="box">Boxed</li>
+          <li>Full width</li>
+        </ul>
+        <h6>Sticky Header</h6>
+        <ul class="header-version option-box">
+          <li class="box">Yes</li>
+          <li>No</li>
+        </ul>
+        <h6>Dark Verion</h6>
+        <ul class="dark-version option-box">
+          <li class="box">Yes</li>
+          <li>No</li>
+        </ul>
+        <div class="purchase-box">
+          <p>
+            You will find much more options for colors and styling in admin
+            panel. This color picker is used only for demonstration purposes.
+          </p>
+          <a href="" class="purchase-box__btn">buy now</a>
+        </div>
+      </div>
+    </div>
+    <!-- ==== / color switcher end ==== -->
+  </div>
+  <!-- ==== js dependencies start ==== -->
+  <!-- jquery -->
+  <script src="../assets/js/jquery-3.7.1.min.js"></script>
+  <!-- bootstrap five js -->
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+  <!-- nice select js -->
+  <script src="../assets/js/jquery.nice-select.min.js"></script>
+  <!-- magnific popup js -->
+  <script src="../assets/js/jquery.magnific-popup.min.js"></script>
+  <!-- swiper slider js -->
+  <script src="../assets/js/swiper-bundle.min.js"></script>
+  <!-- viewport js -->
+  <script src="../assets/js/viewport.jquery.js"></script>
+  <!-- odometer js -->
+  <script src="../assets/js/odometer.min.js"></script>
+  <!-- vanilla tilt js -->
+  <script src="../assets/js/vanilla-tilt.min.js"></script>
+  <!-- aos js -->
+  <script src="../assets/js/aos.js"></script>
+  <!-- splittext js -->
+  <script src="../assets/js/SplitText.min.js"></script>
+  <!-- scrollto js -->
+  <script src="../assets/js/ScrollToPlugin.min.js"></script>
+  <!-- scrolltrigger js -->
+  <script src="../assets/js/ScrollTrigger.min.js"></script>
+  <!-- gsap js -->
+  <script src="../assets/js/gsap.min.js"></script>
+  <!-- ==== / js dependencies end ==== -->
+  <!-- template settings js -->
+  <script src="../assets/js/template-settings.js"></script>
+  <!-- main js -->
+  <script src="../assets/js/custom.js"></script>
+
+  <!-- External/Custom Scripts for Animations -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+      // Initialize VanillaTilt for Premium Cards
+      if (typeof VanillaTilt !== 'undefined') {
+        VanillaTilt.init(document.querySelectorAll(".feature-card-premium"), {
+          max: 12,
+          speed: 400,
+          glare: true,
+          "max-glare": 0.1,
+          scale: 1.02,
+          perspective: 1000
+        });
+      }
+
+      // Use AOS for animations instead of custom GSAP to avoid conflicts
+      // The theme's AOS.init() in custom.js handles the [data-aos] attributes
+
+      // Initialize Swiper for 3D Gallery
+      if (typeof Swiper !== 'undefined') {
+        var gallerySwiper = new Swiper(".swiper-gallery", {
+          effect: "coverflow",
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: "auto",
+          initialSlide: 1, /* Start at Dashboard */
+          loop: true,
+          coverflowEffect: {
+            rotate: 0, /* Flat facing nicely */
+            stretch: 0,
+            depth: 150, /* Moderate depth */
+            modifier: 2, /* Enhance the effect slightly */
+            slideShadows: true,
+          },
+          autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>
