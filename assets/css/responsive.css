@@ -682,7 +682,7 @@
   }
   .header-primary .navbar__options .btn--primary {
     padding-block: 38px 37px;
-    padding-inline: 46px 66px;
+    padding-inline: 46px 36px;
   }
   .header-secondary .navbar__mobile-options {
     gap: 20px;
