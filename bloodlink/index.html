@@ -1,0 +1,3003 @@
+<html lang="en"><head></head><body>﻿
+
+
+
+  <!-- required meta -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- #favicon -->
+  <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+  <link rel="icon" href="../assets/images/favicon.png" type="image/x-icon">
+  <!-- #title -->
+  <title>
+    Bloodlink | Linking veins, Saving lives | Family &amp; Fellows Foundation
+  </title>
+  <!-- #keywords -->
+  <meta name="keywords" content="Bloodlink, blood donation, android app, Family &amp; Fellows Foundation, blood donor, emergency blood">
+  <!-- #description -->
+  <meta name="description" content="Bloodlink - The official Android app by Family &amp; Fellows Foundation for efficient blood donation and receiving. Linking veins, saving lives.">
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&amp;family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&amp;family=Nunito:ital,wght@0,200..1000;1,200..1000&amp;family=Outfit:wght@100..900&amp;display=swap" rel="stylesheet">
+  <!-- main css -->
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <!-- responsive css -->
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <!-- color themes -->
+  <link rel="stylesheet" href="../assets/css/default-theme.css" id="switch-color">
+  <!-- want sticky header -->
+  <link rel="stylesheet" href="../assets/css/sticky-header.css">
+  <!-- box layout css -->
+  <link rel="stylesheet" href="../assets/css/box-layout.css">
+  <!-- dark mode css -->
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <!-- rtl css -->
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+
+  <!-- Custom Styles for Bloodlink Landing Page -->
+  <style>
+    /* Bloodlink Hero Section */
+    .bloodlink-hero {
+      position: relative;
+      padding: 180px 0 120px;
+      background: radial-gradient(circle at top right, rgba(215, 35, 35, 0.04) 0%, transparent 45%),
+        radial-gradient(circle at bottom left, rgba(215, 35, 35, 0.04) 0%, transparent 45%),
+        linear-gradient(to bottom, #ffffff, #fafafa);
+      overflow: hidden;
+    }
+
+    .bloodlink-hero::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-image: url('../assets/images/banner/banner-three-bg.png');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.1;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .bloodlink-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-subtitle {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      color: #D72323;
+      background: rgba(215, 35, 35, 0.1);
+      padding: 8px 20px;
+      border-radius: 30px;
+      margin-bottom: 25px;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .hero-subtitle i {
+      font-size: 1.1rem;
+    }
+
+    .bloodlink-title {
+      font-size: 4rem;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 25px;
+      color: #1a1a1a;
+      letter-spacing: -1px;
+    }
+
+    .text-highlight {
+      color: #D72323;
+      position: relative;
+      display: inline-block;
+    }
+
+    .text-highlight::after {
+      content: '';
+      position: absolute;
+      bottom: 5px;
+      left: 0;
+      width: 100%;
+      height: 12px;
+      background: rgba(215, 35, 35, 0.15);
+      z-index: -1;
+      transform: skewX(-15deg);
+    }
+
+    .hero-desc {
+      font-size: 1.25rem;
+      color: #555;
+      margin-bottom: 40px;
+      max-width: 90%;
+      line-height: 1.6;
+    }
+
+    /* Floating Animation for App Mockup */
+    .floating-animate {
+      animation: float 6s ease-in-out infinite;
+      position: relative;
+      z-index: 2;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-25px);
+      }
+
+      100% {
+        transform: translateY(0px);
+      }
+    }
+
+    .app-mockup-shadow {
+      filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.15));
+    }
+
+    /* Premium Buttons */
+    .download-btn-group {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn-premium {
+      padding: 16px 32px;
+      border-radius: 50px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+    }
+
+    .btn-premium i {
+      font-size: 1.4rem;
+    }
+
+    .btn-android {
+      background: #D72323;
+      color: #fff;
+      box-shadow: 0 10px 25px rgba(215, 35, 35, 0.3);
+    }
+
+    .btn-android:hover {
+      background: #b51b1b;
+      transform: translateY(-4px);
+      box-shadow: 0 15px 35px rgba(215, 35, 35, 0.4);
+      color: #fff;
+    }
+
+    .btn-google {
+      background: #1a1a1a;
+      color: #fff;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-google:hover {
+      background: #000;
+      transform: translateY(-4px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+      color: #fff;
+    }
+
+    /* Premium Feature Cards */
+    .feature-card-premium {
+      background: #fff;
+      padding: 45px 35px;
+      border-radius: 24px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.04);
+      border: 1px solid rgba(0, 0, 0, 0.03);
+      transition: all 0.3s ease;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      transform-style: preserve-3d;
+      transform: perspective(1000px);
+    }
+
+    .feature-card-premium::before {
+      content: '';
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      background: rgba(215, 35, 35, 0.03);
+      border-radius: 50%;
+      top: -50px;
+      right: -50px;
+      transition: all 0.5s ease;
+    }
+
+    .feature-card-premium:hover::before {
+      transform: scale(1.5);
+      background: rgba(215, 35, 35, 0.05);
+    }
+
+    .feature-icon-box {
+      width: 70px;
+      height: 70px;
+      background: linear-gradient(135deg, rgba(215, 35, 35, 0.1) 0%, rgba(215, 35, 35, 0.05) 100%);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 30px;
+      transition: transform 0.3s ease;
+      transform: translateZ(20px);
+    }
+
+    .feature-card-premium:hover .feature-icon-box {
+      transform: translateZ(30px) scale(1.1) rotate(5deg);
+      background: linear-gradient(135deg, rgba(215, 35, 35, 0.2) 0%, rgba(215, 35, 35, 0.1) 100%);
+    }
+
+    .feature-icon-box i {
+      font-size: 28px;
+      color: #D72323;
+    }
+
+    .feature-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+      color: #1a1a1a;
+      transform: translateZ(10px);
+    }
+
+    .feature-desc {
+      color: #666;
+      line-height: 1.6;
+      transform: translateZ(5px);
+    }
+
+    /* Showcase Section Enhancements */
+    .app-showcase-list {
+      margin-top: 30px;
+    }
+
+    .app-showcase-list li {
+      margin-bottom: 20px;
+      font-size: 1.15rem;
+      display: flex;
+      align-items: center;
+      color: #333;
+      font-weight: 500;
+      padding: 10px 20px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+      transition: transform 0.3s ease;
+    }
+
+    .app-showcase-list li:hover {
+      transform: translateX(10px);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    .app-showcase-list li i {
+      margin-right: 15px;
+      color: #fff;
+      font-size: 0.9rem;
+      background: #D72323;
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 991px) {
+      .bloodlink-hero {
+        padding-top: 140px;
+        text-align: center;
+      }
+
+      .hero-desc {
+        margin: 0 auto 40px;
+      }
+
+      .banner-three__thumb {
+        margin-top: 60px;
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .download-btn-group {
+        justify-content: center;
+      }
+
+      .bloodlink-title {
+        font-size: 3rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .bloodlink-title {
+        font-size: 2.5rem;
+      }
+
+      .btn-premium {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    /* Gamification Section */
+    .gamification-section {
+      background: radial-gradient(circle at center, #2a2a2a 0%, #1a1a1a 100%);
+      padding: 100px 0;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .badge-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 40px 20px;
+      text-align: center;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+      height: 100%;
+    }
+
+    .badge-card:hover {
+      transform: translateY(-10px);
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .badge-icon {
+      font-size: 4rem;
+      margin-bottom: 25px;
+      background: -webkit-linear-gradient(#eee, #333);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+      display: inline-block;
+    }
+
+    .tier-bronze .badge-icon {
+      background: linear-gradient(135deg, #cd7f32 0%, #8c5a2b 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .tier-silver .badge-icon {
+      background: linear-gradient(135deg, #e3e3e3 0%, #909090 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .tier-gold .badge-icon {
+      background: linear-gradient(135deg, #ffd700 0%, #b8860b 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .tier-platinum .badge-icon {
+      background: linear-gradient(135deg, #e5e4e2 0%, #a9a9a9 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .tier-hero .badge-icon {
+      background: linear-gradient(135deg, #00f260 0%, #0575e6 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .badge-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .badge-req {
+      color: #ddd;
+      font-size: 1.2rem;
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+
+    .badge-desc {
+      color: #aaa;
+      font-size: 0.95rem;
+    }
+
+    /* Screen Gallery Section */
+    .app-gallery-section {
+      padding: 80px 0 100px;
+      background: #f4f4f4;
+      /* Slight contrast */
+      overflow: hidden;
+    }
+
+    .swiper-gallery {
+      width: 100%;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    .swiper-gallery .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 320px;
+      height: 650px;
+      /* Fixed height for consistent phone look */
+      border-radius: 35px;
+      /* Rounded corners like modern phones */
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      border: 12px solid #222;
+      /* Phone bezel */
+      overflow: hidden;
+      position: relative;
+      background: #000;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .swiper-gallery .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+      /* Ensure full image is visible */
+    }
+
+    .slide-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px 10px;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+      color: #fff;
+      text-align: center;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 1.1rem;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .swiper-slide-active .slide-caption {
+      opacity: 1;
+    }
+
+    /* Process / How It Works */
+    .process-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 40px 30px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+      height: 100%;
+      border: 1px solid #f0f0f0;
+      position: relative;
+    }
+
+    .process-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(215, 35, 35, 0.1);
+      border-color: #ffe0e0;
+    }
+
+    .process-icon {
+      width: 80px;
+      height: 80px;
+      background: #fff5f5;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 25px;
+      color: #D72323;
+      font-size: 2rem;
+      transition: all 0.3s ease;
+    }
+
+    .process-card:hover .process-icon {
+      background: #D72323;
+      color: #fff;
+      transform: rotateY(180deg);
+    }
+
+    .process-step {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-weight: 800;
+      font-size: 3rem;
+      color: #f9f9f9;
+      line-height: 1;
+      z-index: 0;
+    }
+
+    .process-title {
+      font-weight: 700;
+      margin-bottom: 15px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .process-desc {
+      color: #666;
+      font-size: 0.95rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ========================================
+       Complete Workflow Section Styles
+       ======================================== */
+
+    .workflow-section {
+      padding: 100px 0;
+      background: linear-gradient(180deg, #fff 0%, #f8f9fa 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .workflow-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1px;
+      height: 100%;
+      background: linear-gradient(to bottom, transparent, rgba(215, 35, 35, 0.1), transparent);
+      z-index: 0;
+    }
+
+    /* Flow Tabs */
+    .flow-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 60px;
+      flex-wrap: wrap;
+    }
+
+    .flow-tab {
+      padding: 18px 40px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      border: 2px solid transparent;
+      background: #fff;
+      color: #333;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .flow-tab::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+      transition: left 0.5s ease;
+    }
+
+    .flow-tab:hover::before {
+      left: 100%;
+    }
+
+    .flow-tab i {
+      font-size: 1.3rem;
+      transition: transform 0.3s ease;
+    }
+
+    .flow-tab:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    }
+
+    .flow-tab.active {
+      background: linear-gradient(135deg, #D72323 0%, #b51b1b 100%);
+      color: #fff;
+      border-color: transparent;
+      box-shadow: 0 15px 40px rgba(215, 35, 35, 0.35);
+    }
+
+    .flow-tab.active i {
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.2);
+      }
+    }
+
+    /* Flow Content */
+    .flow-content {
+      display: none;
+      animation: fadeInUp 0.6s ease forwards;
+    }
+
+    .flow-content.active {
+      display: block;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Timeline Container */
+    .timeline-container {
+      position: relative;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 60px 0 80px;
+    }
+
+    /* ========================================
+       SNAKE/SERPENTINE TIMELINE DESIGN
+       ======================================== */
+
+    /* Main Snake Body - SVG Based */
+    .timeline-line {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 8px;
+      transform: translateX(-50%);
+      overflow: visible;
+    }
+
+    /* Snake Path with Gradient */
+    .timeline-line::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+      width: 8px;
+      height: 100%;
+      background: linear-gradient(180deg,
+          #D72323 0%,
+          #ff4444 10%,
+          #D72323 20%,
+          #ff6b6b 35%,
+          #D72323 50%,
+          #ff4444 65%,
+          #D72323 80%,
+          #20c997 95%,
+          #28a745 100%);
+      border-radius: 50px;
+      box-shadow:
+        0 0 30px rgba(215, 35, 35, 0.4),
+        0 0 60px rgba(215, 35, 35, 0.2),
+        inset 0 0 10px rgba(255, 255, 255, 0.3);
+      animation: snakeGlow 3s ease-in-out infinite;
+    }
+
+    @keyframes snakeGlow {
+
+      0%,
+      100% {
+        box-shadow:
+          0 0 30px rgba(215, 35, 35, 0.4),
+          0 0 60px rgba(215, 35, 35, 0.2),
+          inset 0 0 10px rgba(255, 255, 255, 0.3);
+      }
+
+      50% {
+        box-shadow:
+          0 0 50px rgba(215, 35, 35, 0.6),
+          0 0 100px rgba(215, 35, 35, 0.3),
+          inset 0 0 15px rgba(255, 255, 255, 0.5);
+      }
+    }
+
+    /* Snake Scales Effect - Repeating Pattern */
+    .timeline-line::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 20px;
+      transform: translateX(-50%);
+      width: 20px;
+      height: calc(100% - 40px);
+      background:
+        repeating-linear-gradient(180deg,
+          transparent 0px,
+          transparent 8px,
+          rgba(255, 255, 255, 0.15) 8px,
+          rgba(255, 255, 255, 0.15) 12px,
+          transparent 12px,
+          transparent 20px);
+      border-radius: 50px;
+      z-index: 2;
+      animation: scalesMove 2s linear infinite;
+    }
+
+    @keyframes scalesMove {
+      0% {
+        background-position: 0 0;
+      }
+
+      100% {
+        background-position: 0 40px;
+      }
+    }
+
+    /* Blood Drop Particles Flowing Down */
+    .timeline-container::before {
+      content: '💧';
+      position: absolute;
+      left: 50%;
+      top: 80px;
+      transform: translateX(-50%);
+      font-size: 14px;
+      animation: bloodFlow 4s ease-in-out infinite;
+      z-index: 5;
+      filter: hue-rotate(-20deg) saturate(2);
+    }
+
+    @keyframes bloodFlow {
+      0% {
+        top: 80px;
+        opacity: 0;
+        transform: translateX(-50%) scale(0.5);
+      }
+
+      10% {
+        opacity: 1;
+        transform: translateX(-50%) scale(1);
+      }
+
+      90% {
+        opacity: 1;
+        transform: translateX(-50%) scale(1);
+      }
+
+      100% {
+        top: calc(100% - 80px);
+        opacity: 0;
+        transform: translateX(-50%) scale(0.5);
+      }
+    }
+
+    /* Start Point - Glowing Heart */
+    .timeline-container .timeline-line+.timeline-item::before {
+      display: none;
+    }
+
+    /* Snake Head at Top */
+    .flow-content::before {
+      content: '❤️';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(145deg, #D72323 0%, #ff2222 50%, #cc0000 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      border: 5px solid #fff;
+      box-shadow:
+        0 0 40px rgba(215, 35, 35, 0.7),
+        0 10px 30px rgba(0, 0, 0, 0.3),
+        inset 0 -5px 15px rgba(0, 0, 0, 0.2);
+      z-index: 20;
+      animation: heartPump 1.2s ease-in-out infinite;
+    }
+
+    @keyframes heartPump {
+
+      0%,
+      100% {
+        transform: translateX(-50%) scale(1);
+        box-shadow:
+          0 0 40px rgba(215, 35, 35, 0.7),
+          0 10px 30px rgba(0, 0, 0, 0.3);
+      }
+
+      15% {
+        transform: translateX(-50%) scale(1.15);
+        box-shadow:
+          0 0 60px rgba(215, 35, 35, 0.9),
+          0 15px 40px rgba(0, 0, 0, 0.4);
+      }
+
+      30% {
+        transform: translateX(-50%) scale(1);
+      }
+
+      45% {
+        transform: translateX(-50%) scale(1.08);
+      }
+    }
+
+    /* Snake Tail at Bottom - Success */
+    .timeline-container::after {
+      content: '✅';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(145deg, #28a745 0%, #20c997 50%, #17a2b8 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      border: 5px solid #fff;
+      box-shadow:
+        0 0 40px rgba(40, 167, 69, 0.7),
+        0 10px 30px rgba(0, 0, 0, 0.3),
+        inset 0 -5px 15px rgba(0, 0, 0, 0.2);
+      z-index: 20;
+      animation: successGlow 2s ease-in-out infinite;
+    }
+
+    @keyframes successGlow {
+
+      0%,
+      100% {
+        box-shadow:
+          0 0 40px rgba(40, 167, 69, 0.7),
+          0 10px 30px rgba(0, 0, 0, 0.3);
+      }
+
+      50% {
+        box-shadow:
+          0 0 70px rgba(40, 167, 69, 0.9),
+          0 15px 40px rgba(0, 0, 0, 0.4);
+      }
+    }
+
+    /* Curved Connectors from Timeline to Cards */
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(90deg,
+          rgba(215, 35, 35, 0.6),
+          rgba(215, 35, 35, 0.2));
+      border-radius: 4px;
+      z-index: 0;
+    }
+
+    .timeline-item:nth-child(odd)::before {
+      transform: translateY(-50%) translateX(-100%);
+      background: linear-gradient(90deg,
+          rgba(215, 35, 35, 0.2),
+          rgba(215, 35, 35, 0.6));
+    }
+
+    .timeline-item:nth-child(even)::before {
+      transform: translateY(-50%);
+      background: linear-gradient(90deg,
+          rgba(215, 35, 35, 0.6),
+          rgba(215, 35, 35, 0.2));
+    }
+
+    /* ========================================
+       TIMELINE ITEMS
+       ======================================== */
+
+    .timeline-item {
+      position: relative;
+      padding: 35px 0;
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
+
+    .timeline-item:nth-child(odd) {
+      flex-direction: row;
+    }
+
+    .timeline-item:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    /* ========================================
+       STEP CARDS - Premium Design
+       ======================================== */
+
+    .step-card {
+      width: calc(50% - 70px);
+      background: linear-gradient(145deg, #ffffff 0%, #fafafa 100%);
+      border-radius: 28px;
+      padding: 35px 30px;
+      box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.08),
+        0 8px 25px rgba(0, 0, 0, 0.04);
+      border: 1px solid rgba(215, 35, 35, 0.08);
+      position: relative;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+    }
+
+    /* Decorative Corner Accent */
+    .step-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      background: linear-gradient(90deg, #D72323, #ff6b6b, #D72323);
+      background-size: 200% 100%;
+      opacity: 0;
+      transition: all 0.4s ease;
+      animation: gradientSlide 3s linear infinite paused;
+    }
+
+    @keyframes gradientSlide {
+      0% {
+        background-position: 0% 0%;
+      }
+
+      100% {
+        background-position: 200% 0%;
+      }
+    }
+
+    /* Subtle Background Pattern */
+    .step-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 150px;
+      height: 150px;
+      background: radial-gradient(circle, rgba(215, 35, 35, 0.03) 0%, transparent 70%);
+      border-radius: 50%;
+      transform: translate(30%, -30%);
+      pointer-events: none;
+    }
+
+    .step-card:hover {
+      transform: translateY(-12px) scale(1.02);
+      box-shadow:
+        0 30px 80px rgba(215, 35, 35, 0.15),
+        0 15px 40px rgba(0, 0, 0, 0.08);
+      border-color: rgba(215, 35, 35, 0.2);
+    }
+
+    .step-card:hover::before {
+      opacity: 1;
+      animation-play-state: running;
+    }
+
+    /* ========================================
+       STEP NODE - On Top of Timeline
+       ======================================== */
+
+    .step-node {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 64px;
+      height: 64px;
+      background: linear-gradient(145deg, #D72323 0%, #ff3333 50%, #cc0000 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 800;
+      font-size: 1.5rem;
+      font-family: 'Outfit', sans-serif;
+      border: 6px solid #fff;
+      box-shadow:
+        0 0 0 4px rgba(215, 35, 35, 0.2),
+        0 15px 40px rgba(215, 35, 35, 0.5),
+        inset 0 -4px 10px rgba(0, 0, 0, 0.2),
+        inset 0 4px 10px rgba(255, 255, 255, 0.2);
+      z-index: 15;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .step-node::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: inherit;
+      z-index: -1;
+      animation: nodeRipple 2s ease-out infinite;
+      opacity: 0;
+    }
+
+    @keyframes nodeRipple {
+      0% {
+        transform: scale(1);
+        opacity: 0.5;
+      }
+
+      100% {
+        transform: scale(1.8);
+        opacity: 0;
+      }
+    }
+
+    .timeline-item:hover .step-node {
+      transform: translateX(-50%) scale(1.2) rotate(5deg);
+      box-shadow:
+        0 0 0 6px rgba(215, 35, 35, 0.3),
+        0 20px 50px rgba(215, 35, 35, 0.6),
+        inset 0 -4px 10px rgba(0, 0, 0, 0.2),
+        inset 0 4px 10px rgba(255, 255, 255, 0.3);
+    }
+
+    /* Step Header */
+    .step-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+
+    .step-icon {
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, rgba(215, 35, 35, 0.1) 0%, rgba(215, 35, 35, 0.05) 100%);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #D72323;
+      font-size: 1.3rem;
+      transition: all 0.3s ease;
+      flex-shrink: 0;
+    }
+
+    .step-card:hover .step-icon {
+      background: #D72323;
+      color: #fff;
+      transform: rotate(10deg) scale(1.1);
+    }
+
+    .step-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin: 0;
+    }
+
+    .step-description {
+      color: #666;
+      line-height: 1.7;
+      font-size: 0.95rem;
+      margin: 0;
+    }
+
+    /* Important Note Box */
+    .important-note {
+      background: linear-gradient(135deg, #fff5f5 0%, #ffe8e8 100%);
+      border-left: 4px solid #D72323;
+      padding: 25px 30px;
+      border-radius: 12px;
+      margin-top: 50px;
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .important-note i {
+      font-size: 2rem;
+      color: #D72323;
+      flex-shrink: 0;
+    }
+
+    .important-note-content h4 {
+      color: #D72323;
+      font-weight: 700;
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    .important-note-content p {
+      color: #555;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    /* Flow Completion Badge */
+    .flow-complete {
+      text-align: center;
+      margin-top: 50px;
+      padding: 40px;
+      background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+      border-radius: 20px;
+      color: #fff;
+    }
+
+    .flow-complete i {
+      font-size: 3rem;
+      margin-bottom: 15px;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .flow-complete h4 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .flow-complete p {
+      opacity: 0.9;
+      margin: 0;
+    }
+
+    /* Trust Badge Section */
+    .trust-badges {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 60px;
+      flex-wrap: wrap;
+    }
+
+    .trust-badge {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 15px 25px;
+      background: #fff;
+      border-radius: 50px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+    }
+
+    .trust-badge i {
+      font-size: 1.5rem;
+      color: #D72323;
+    }
+
+    .trust-badge span {
+      font-weight: 600;
+      color: #333;
+    }
+
+    /* ========================================
+       Mobile Responsive Styles for Workflow
+       ======================================== */
+
+    @media (max-width: 991px) {
+      .timeline-container {
+        padding: 50px 0 70px;
+      }
+
+      .timeline-line {
+        left: 35px;
+      }
+
+      .timeline-line::before {
+        left: 50%;
+        width: 6px;
+      }
+
+      /* Hide snake scales on mobile */
+      .timeline-line::after {
+        display: none;
+      }
+
+      /* Hide blood drop on mobile */
+      .timeline-container::before {
+        display: none;
+      }
+
+      .timeline-container::after {
+        left: 35px;
+        width: 44px;
+        height: 44px;
+        font-size: 18px;
+      }
+
+      .flow-content::before {
+        left: 35px;
+        width: 44px;
+        height: 44px;
+        font-size: 18px;
+      }
+
+      .timeline-item::before {
+        display: none;
+      }
+
+      .timeline-item,
+      .timeline-item:nth-child(odd),
+      .timeline-item:nth-child(even) {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 90px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+
+      .step-card {
+        width: 100%;
+      }
+
+      .step-node {
+        left: 35px;
+        width: 52px;
+        height: 52px;
+        font-size: 1.2rem;
+        border-width: 5px;
+        z-index: 15;
+      }
+
+      .step-node::before {
+        display: none;
+      }
+
+      .timeline-item:hover .step-node {
+        transform: translateX(-50%) scale(1.1);
+      }
+
+      .flow-tabs {
+        gap: 10px;
+      }
+
+      .flow-tab {
+        padding: 15px 25px;
+        font-size: 0.9rem;
+      }
+
+      .trust-badges {
+        gap: 20px;
+      }
+
+      .trust-badge {
+        padding: 12px 20px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .workflow-section {
+        padding: 50px 0;
+      }
+
+      .timeline-container {
+        padding: 40px 0 60px;
+      }
+
+      .timeline-line {
+        left: 22px;
+      }
+
+      .timeline-line::before {
+        width: 5px;
+      }
+
+      .timeline-container::after {
+        left: 22px;
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
+        border-width: 4px;
+      }
+
+      .flow-content::before {
+        left: 22px;
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
+        border-width: 4px;
+      }
+
+      .timeline-item,
+      .timeline-item:nth-child(odd),
+      .timeline-item:nth-child(even) {
+        padding-left: 65px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+
+      .step-node {
+        left: 22px;
+        width: 40px;
+        height: 40px;
+        font-size: 0.95rem;
+        border-width: 4px;
+        z-index: 15;
+      }
+
+      .step-card {
+        padding: 20px 16px;
+        border-radius: 16px;
+      }
+
+      .step-card::after {
+        display: none;
+      }
+
+      .step-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .step-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 1rem;
+        border-radius: 12px;
+      }
+
+      .step-title {
+        font-size: 1rem;
+      }
+
+      .step-description {
+        font-size: 0.85rem;
+        line-height: 1.6;
+      }
+
+      .flow-tab {
+        width: 100%;
+        justify-content: center;
+        padding: 14px 16px;
+        font-size: 0.85rem;
+        gap: 8px;
+      }
+
+      .flow-tab i {
+        font-size: 1.1rem;
+      }
+
+      .important-note {
+        flex-direction: column;
+        padding: 16px;
+        gap: 12px;
+        border-radius: 10px;
+      }
+
+      .important-note i {
+        font-size: 1.3rem;
+      }
+
+      .important-note-content h4 {
+        font-size: 1rem;
+      }
+
+      .important-note-content p {
+        font-size: 0.85rem;
+      }
+
+      .trust-badge {
+        width: 100%;
+        justify-content: center;
+        padding: 10px 15px;
+        font-size: 0.85rem;
+        gap: 8px;
+      }
+
+      .trust-badge i {
+        font-size: 1.2rem;
+      }
+
+      .flow-complete {
+        padding: 22px 16px;
+        border-radius: 16px;
+      }
+
+      .flow-complete i {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+      }
+
+      .flow-complete h4 {
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+      }
+
+      .flow-complete p {
+        font-size: 0.85rem;
+      }
+    }
+
+    /* ========================================
+       Community Contribution Highlight Section
+       ======================================== */
+    .contribution-section {
+      padding: 100px 0;
+      background: radial-gradient(circle at center, #1a1a1a 0%, #000000 100%);
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contribution-section::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(circle, rgba(215, 35, 35, 0.15) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .contribution-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .highlight-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 20px;
+      background: rgba(215, 35, 35, 0.2);
+      border: 1px solid rgba(215, 35, 35, 0.5);
+      border-radius: 50px;
+      color: #ff6b6b;
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 25px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .contribution-title {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 25px;
+      line-height: 1.2;
+      background: linear-gradient(135deg, #fff 0%, #ccc 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .contribution-desc {
+      font-size: 1.15rem;
+      color: #bbb;
+      line-height: 1.8;
+      margin-bottom: 40px;
+    }
+
+    .feature-list-highlight {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .highlight-item {
+      display: flex;
+      align-items: start;
+      gap: 15px;
+    }
+
+    .highlight-icon {
+      width: 50px;
+      height: 50px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #D72323;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .highlight-item:hover .highlight-icon {
+      background: #D72323;
+      color: #fff;
+      transform: scale(1.1);
+    }
+
+    .highlight-text h5 {
+      color: #fff;
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    .highlight-text p {
+      color: #888;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* Mockup Container */
+    .mockup-container {
+      position: relative;
+      perspective: 1500px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+
+    .mockup-wrapper {
+      position: relative;
+      border-radius: 40px;
+      padding: 10px;
+      max-width: 380px;
+      background: #2a2a2a;
+      box-shadow:
+        0 50px 100px rgba(0, 0, 0, 0.5),
+        inset 0 0 20px rgba(0, 0, 0, 0.5);
+      border: 2px solid #333;
+      transition: transform 0.5s ease;
+      transform: rotateY(-10deg) rotateX(5deg);
+    }
+
+    .mockup-container:hover .mockup-wrapper {
+      transform: rotateY(0deg) rotateX(0deg) scale(1.02);
+    }
+
+    .mockup-screen {
+      border-radius: 32px;
+      overflow: hidden;
+      border: 2px solid #000;
+      line-height: 0;
+    }
+
+    .mockup-screen img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Floating Badge on Image */
+    .floating-badge {
+      position: absolute;
+      bottom: 40px;
+      right: -30px;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 15px 25px;
+      border-radius: 20px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      backdrop-filter: blur(10px);
+      transition: all 0.4s ease;
+      transform: translateZ(50px);
+      z-index: 5;
+    }
+
+    .mockup-container:hover .floating-badge {
+      transform: translateZ(80px) translateY(-10px);
+    }
+
+    .floating-badge i {
+      font-size: 2rem;
+      color: #28a745;
+    }
+
+    .floating-badge h4 {
+      color: #1a1a1a;
+      font-size: 1.1rem;
+      font-weight: 800;
+      margin: 0;
+    }
+
+    .floating-badge span {
+      display: block;
+      color: #666;
+      font-size: 0.85rem;
+      margin-top: 2px;
+    }
+
+    @media (max-width: 991px) {
+      .contribution-title {
+        font-size: 2.2rem;
+      }
+
+      .mockup-wrapper {
+        transform: none;
+        margin-top: 50px;
+        max-width: 350px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .mockup-container:hover .mockup-wrapper {
+        transform: none;
+      }
+
+      .floating-badge {
+        right: 0;
+      }
+    }
+  </style>
+
+
+
+  <!--[if lt IE 9]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+        your experience and security.
+      </p>
+    <![endif]-->
+  <div class="page-wrapper">
+    <!-- ==== topbar start ==== -->
+    <div class="topbar topbar--secondary d-none d-lg-block">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="topbar__inner">
+              <div class="row align-items-center">
+                <div class="col-12 col-lg-6 col-xxl-4">
+                  <div class="topbar__list-wrapper">
+                    <ul class="topbar__list">
+                      <li>
+                        <a href="mailto:info@familyandfellowsfoundation.org"><i class="fa-regular fa-envelope"></i>info@familyandfellowsfoundation.org</a>
+                      </li>
+                      <li>
+                        <a href="tel:+923268484360"><i class="fa-solid fa-phone"></i>+92 326 8484360</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-12 col-xxl-4 d-none d-xxl-block">
+                  <div class="topbar__extra text-center">
+                    <p>
+                      <i class="icon-heart-hand"></i> Together we can make a
+                      difference. Join us in our mission!
+                    </p>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-6 col-xxl-4">
+                  <div class="topbar__items justify-content-end">
+                    <div class="social">
+                      <a href="https://www.instagram.com/family_and_fellows_foundation/#" target="_blank" aria-label="share us on instagram" title="instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                      </a>
+                      <a href="https://www.tiktok.com/@family.and.fellow" target="_blank" aria-label="share us on tiktok" title="tiktok">
+                        <i class="fa-brands fa-tiktok"></i>
+                      </a>
+                      <a href="https://x.com/familyandfellow" target="_blank" aria-label="share us on twitter" title="twitter">
+                        <i class="fa-brands fa-twitter"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ==== / topbar end ==== -->
+    <!-- ==== header start ==== -->
+    <header class="header header-secondary">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="main-header__menu-box">
+              <nav class="navbar p-0">
+                <div class="navbar-logo">
+                  <a href="../">
+                    <img src="../assets/images/logo.png" alt="Image">
+                  </a>
+                </div>
+                <div class="navbar__menu-wrapper">
+                  <div class="navbar__menu d-none d-xl-block">
+                    <ul class="navbar__list">
+                      <li class="navbar__item nav-fade">
+                        <a href="../">Home</a>
+                      </li>
+                      <li class="navbar__item nav-fade">
+                        <a href="../about/">About Us</a>
+                      </li>
+                      <li class="navbar__item navbar__item--has-children nav-fade">
+                        <a href="../our-causes/" aria-label="dropdown menu" class="navbar__dropdown-label dropdown-label-alter">Causes</a>
+                        <ul class="navbar__sub-menu">
+                          <li><a href="../our-causes/education/">Education</a></li>
+                          <li><a href="../our-causes/health-care/">Health Care</a></li>
+                          <li><a href="../our-causes/food-for-all/">Food For All</a></li>
+                          <li><a href="../our-causes/disaster-management/">Disaster Management</a></li>
+                          <li><a href="../our-causes/social-welfare/marriage-assistance-details/">Social Welfare</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="navbar__item nav-fade">
+                        <a href="../become-volunteer/">Become a Volunteer</a>
+                      </li>
+                      <li class="navbar__item nav-fade">
+                        <a href="../blogs/">Blogs</a>
+                      </li>
+                      <li class="navbar__item nav-fade">
+                        <a href="../bloodlink/" class="nav-bloodlink" style="color: #D72323 !important; font-weight: 700;">Bloodlink</a>
+                      </li>
+                      <li class="navbar__item nav-fade">
+                        <a href="https://portal-lime-iota.vercel.app/" target="_blank" class="nav-portal" style="color: #0056b3 !important; font-weight: 700;">Portal</a>
+                      </li>
+                      <li class="navbar__item nav-fade">
+                        <a href="../contact/">Contact Us</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="contact-btn">
+                    <div class="contact-icon">
+                      <i class="icon-support"></i>
+                    </div>
+                    <div class="contact-content">
+                      <p>Call Us Now</p>
+                      <a href="tel:+923268484360">+92 326 8484360</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="navbar__options">
+
+                  <button class="open-offcanvas-nav d-flex d-xl-none" aria-label="toggle mobile menu" title="open offcanvas menu">
+                    <span class="icon-bar top-bar"></span>
+                    <span class="icon-bar middle-bar"></span>
+                    <span class="icon-bar bottom-bar"></span>
+                  </button>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- ==== / header end ==== -->
+    <!-- ==== mobile menu start ==== -->
+    <div class="mobile-menu mobile-menu--primary d-block d-xxl-none">
+      <nav class="mobile-menu__wrapper">
+        <div class="mobile-menu__header nav-fade">
+          <div class="logo">
+            <a href="../" aria-label="home page" title="logo">
+              <img src="../assets/images/apps/blood-link-app/logo-bloodlink.png" alt="Bloodlink by FNFF">
+            </a>
+          </div>
+          <button aria-label="close mobile menu" class="close-mobile-menu">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <div class="mobile-menu__list"></div>
+        <div class="mobile-menu__cta nav-fade d-block d-md-none">
+          <a href="https://wa.link/nidmkf" class="btn--primary">Donate Now <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="mobile-menu__social social nav-fade">
+          <a href="https://www.instagram.com/family_and_fellows_foundation/#" target="_blank" aria-label="share us on facebook" title="facebook">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://www.tiktok.com/@family.and.fellow" target="_blank" aria-label="share us on vimeo" title="vimeo">
+            <i class="fa-brands fa-tiktok"></i>
+          </a>
+          <a href="https://x.com/familyandfellow" target="_blank" aria-label="share us on twitter" title="twitter">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+        </div>
+      </nav>
+    </div>
+    <div class="mobile-menu__backdrop"></div>
+    <!-- ==== / mobile menu end ==== -->
+
+    <!-- ==== Bloodlink Hero Section Start ==== -->
+    <section class="bloodlink-hero">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 col-lg-7">
+            <div class="bloodlink-content">
+              <span class="hero-subtitle" data-aos="fade-down" data-aos-delay="100">
+                <img src="../assets/images/apps/blood-link-app/logo-bloodlink.png" alt="Bloodlink" style="height: 30px; margin-right: 10px; vertical-align: middle;"> Official Android App
+              </span>
+              <h1 class="bloodlink-title" data-aos="fade-up" data-aos-delay="200">
+                Linking Veins, <br>
+                <span class="text-highlight">Saving Lives</span>
+              </h1>
+              <p class="hero-desc" data-aos="fade-up" data-aos-delay="300">
+                Connecting verified blood donors with recipients in need. Built by the Family &amp; Fellows Foundation,
+                Blood Link promotes transparent, community-driven donation with smart location-based matching.
+              </p>
+              <div class="download-btn-group" data-aos="fade-up" data-aos-delay="400">
+                <a href="https://play.google.com/store/apps/details?id=com.familyandfellowsfoundation.org.bloodlink" class="btn-premium btn-google" target="_blank">
+                  <i class="fa-brands fa-google-play"></i> Google Play
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-5">
+            <div class="banner-three__thumb floating-animate">
+              <!-- Animated Image/Mockup -->
+              <!-- Using the same placeholder content but styled.
+                   Ideally this should be a transparent PNG of the phone mockup -->
+              <img src="../assets/images/apps/blood-link-app/donation-request-map-view.jpeg" alt="Bloodlink App Dashboard" class="app-mockup-shadow" style="border-radius: 20px; width: 100%; max-width: 380px; display: block; margin: 0 auto; transform: rotate(-5deg); border: 8px solid #1a1a1a;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ==== / Bloodlink Hero Section End ==== -->
+
+    <!-- ==== Community Contribution Highlight Section Start ==== -->
+    <section class="contribution-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Text Content -->
+          <div class="col-12 col-lg-6 order-2 order-lg-1">
+            <div class="contribution-content" data-aos="fade-right">
+              <div class="highlight-badge">
+                <i class="fa-solid fa-star"></i> Featured Benefit
+              </div>
+              <h2 class="contribution-title">Donor Community <br>Contribution Visibility</h2>
+              <p class="contribution-desc">
+                Your donation history and community contributions become visible to other verified donors. If you ever
+                request blood, previous donors can see your track record — building trust through transparency.
+              </p>
+
+              <div class="feature-list-highlight">
+                <div class="highlight-item">
+                  <div class="highlight-icon">
+                    <i class="fa-solid fa-users-viewfinder"></i>
+                  </div>
+                  <div class="highlight-text">
+                    <h5>Community Transparency</h5>
+                    <p>Verified donors can view each other's contribution history.</p>
+                  </div>
+                </div>
+
+                <div class="highlight-item">
+                  <div class="highlight-icon">
+                    <i class="fa-solid fa-hand-holding-heart"></i>
+                  </div>
+                  <div class="highlight-text">
+                    <h5>Social Proof</h5>
+                    <p>Your generosity is recorded and celebrated within the ecosystem.</p>
+                  </div>
+                </div>
+
+                <div class="highlight-item">
+                  <div class="highlight-icon">
+                    <i class="fa-solid fa-shield-heart"></i>
+                  </div>
+                  <div class="highlight-text">
+                    <h5>Priority Trust</h5>
+                    <p>Build instant trust when you need help by showing your past support.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image Content -->
+          <div class="col-12 col-lg-6 order-1 order-lg-2">
+            <div class="mockup-container" data-aos="fade-left" data-aos-delay="200">
+              <div class="mockup-wrapper">
+                <div class="mockup-screen">
+                  <img src="../assets/images/apps/blood-link-app/dashboard2.jpeg" alt="Blood Link Donor Dashboard showing Contribution Visibility">
+                </div>
+              </div>
+
+              <!-- Floating Badge -->
+              <div class="floating-badge floating-animate">
+                <i class="fa-solid fa-circle-check"></i>
+                <div class="badge-content">
+                  <h4>Verified Donor</h4>
+                  <span>Active Community Member</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ==== / Community Contribution Highlight Section End ==== -->
+
+    <!-- ==== How It Works / Ecosystem Section Start ==== -->
+    <section class="section-space" style="background: #fafafa;">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-8">
+            <div class="section__header text-center" style="margin-bottom: 60px;">
+              <span class="sub-title-two" style="color: #D72323;">How It Works</span>
+              <h2 class="title-animation">The Donation Ecosystem</h2>
+              <p style="max-width: 600px; margin: 15px auto 0;">Connecting those in need with those who can help,
+                securely and transparently.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row gutter-30">
+          <!-- Step 1: Recipient -->
+          <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="process-card">
+              <div class="process-step">01</div>
+              <div class="process-icon">
+                <i class="fa-solid fa-hand-holding-heart"></i>
+              </div>
+              <h4 class="process-title">Request Blood</h4>
+              <p class="process-desc">Recipients create a verified request for themselves or a loved one, specifying
+                blood type and urgency.</p>
+            </div>
+          </div>
+          <!-- Step 2: Foundation (Admin) -->
+          <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="process-card">
+              <div class="process-step">02</div>
+              <div class="process-icon">
+                <i class="fa-solid fa-file-shield"></i>
+              </div>
+              <h4 class="process-title">Staff Verification</h4>
+              <p class="process-desc">Foundation staff reviews every request via the admin dashboard to ensure
+                authenticity and integrity.</p>
+            </div>
+          </div>
+          <!-- Step 3: Donor -->
+          <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="process-card">
+              <div class="process-step">03</div>
+              <div class="process-icon">
+                <i class="fa-solid fa-person-running"></i>
+              </div>
+              <h4 class="process-title">Donor Action</h4>
+              <p class="process-desc">Verified donors within 5-20km receive instant alerts, view the request, and
+                proceed to save a life.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ==== / How It Works / Ecosystem Section End ==== -->
+
+    <!-- ==== Complete Workflow Section Start ==== -->
+    <section class="workflow-section" id="workflow">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-8">
+            <div class="section__header text-center" style="margin-bottom: 50px;">
+              <span class="sub-title-two" style="color: #D72323;">Complete Journey</span>
+              <h2 class="title-animation">How Blood Link Works</h2>
+              <p style="color: #666; margin-top: 15px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Blood Link is a <strong>coordination layer</strong> — not a blood bank. All donations happen through
+                verified hospitals and blood banks for safety and transparency.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flow Switcher Tabs -->
+        <div class="flow-tabs" data-aos="fade-up">
+          <button class="flow-tab active" data-flow="donor">
+            <i class="fa-solid fa-hand-holding-droplet"></i>
+            I Want to Donate
+          </button>
+          <button class="flow-tab" data-flow="recipient">
+            <i class="fa-solid fa-heart-pulse"></i>
+            I Need Blood
+          </button>
+        </div>
+
+        <!-- ============================================
+             DONOR FLOW - 7 Steps
+             ============================================ -->
+        <div class="flow-content active" id="donor-flow">
+          <div class="timeline-container">
+            <div class="timeline-line"></div>
+
+            <!-- Step 1: Sign Up -->
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+              <div class="step-node">1</div>
+              <div class="step-card">
+                <div class="step-header">
+                  <div class="step-icon">
+                    <i class="fa-solid fa-user-plus"></i>
+                  </div>
+                  <h4 class="step-title">Sign Up</h4>
+                </div>
+                <p class="step-description">
+                  Create your account using <strong>Google</strong> or <strong>Email</strong>. Quick and secure
+                  authentication gets you started in seconds.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 2: Complete Profile -->
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="150">
+              <div class="step-node">2</div>
+              <div class="step-card">
+                <div class="step-header">
+                  <div class="step-icon">
+                    <i class="fa-solid fa-droplet"></i>
+                  </div>
+                  <h4 class="step-title">Set Your Blood Group</h4>
+                </div>
+                <p class="step-description">
+                  Navigate to the <strong>Profile Tab</strong> and select your blood group. This enables smart matching
+                  with compatible requests nearby.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 3: View Nearby Requests -->
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+              <div class="step-node">3</div>
+              <div class="step-card">
+                <div class="step-header">
+                  <div class="step-icon">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                  </div>
+                  <h4 class="step-title">View Nearby Requests</h4>
+                </div>
+                <p class="step-description">
+                  Browse verified blood requests within <strong>5km, 10km, or 20km</strong> radius. See urgency levels,
+                  blood type needed, and hospital location on an interactive map.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 4: Accept Request -->
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="250">
+              <div class="step-node">4</div>
+              <div class="step-card">
+                <div class="step-header">
+                  <div class="step-icon">
+                    <i class="fa-solid fa-hospital"></i>
+                  </div>
+                  <h4 class="step-title">Accept &amp; Go to Hospital</h4>
+                </div>
+                <p class="step-description">
+                  Accept a request and proceed to the designated <strong>hospital or blood bank</strong>. You'll get
+                  directions and contact information for the facility.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 5: Donate & Upload Proof -->
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+              <div class="step-node">5</div>
+              <div class="step-card">
+                <div class="step-header">
+                  <div class="step-icon">
+                    <i class="fa-solid fa-camera"></i>
+                  </div>
+                  <h4 class="step-title">Upload Donation Proof</h4>
+                </div>
+                <p class="step-description">
+                  After donating at the hospital, upload <strong>proof of donation</strong> (hospital receipt,
+                  certificate, or photo). This ensures transparency and trust.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 6: Staff Review -->
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="350">
+              <div class="step-node">6</div>
+              <div class="step-card">
+                <div class="step-header">
+                  <div class="step-icon">
+                    <i class="fa-solid fa-clipboard-check"></i>
+                  </div>
+                  <h4 class="step-title">Staff Reviews &amp; Approves</h4>
+                </div>
+                <p class="step-description">
+                  Foundation staff verifies your donation proof within <strong>24-48 hours</strong>. Your approved
+                  donation is recorded permanently in your history.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 7: Profile Verified -->
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+              <div class="step-node">7</div>
+              <div class="step-card">
+                <div class="step-header">
+                  <div class="step-icon">
+                    <i class="fa-solid fa-circle-check"></i>
+                  </div>
+                  <h4 class="step-title">Profile Auto-Verified</h4>
+                </div>
+                <p class="step-description">
+                  On your <strong>first verified donation</strong>, your profile receives a verified badge. Other donors
+                  can see your donation history if you ever need blood.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Donor Flow Completion -->
+          <div class="flow-complete" data-aos="zoom-in" data-aos-delay="450">
+            <i class="fa-solid fa-trophy"></i>
+            <h4>You're a Life Saver!</h4>
+            <p>Your contribution is visible to the community. Keep donating to level up!</p>
+          </div>
+
+          <!-- Important Note for Donors -->
+          <div class="important-note" data-aos="fade-up" data-aos-delay="500">
+            <i class="fa-solid fa-shield-halved"></i>
+            <div class="important-note-content">
+              <h4>Community Contribution Visibility</h4>
+              <p>Your donation history and community contributions become visible to other verified donors. If you ever
+                request blood, previous donors can see your track record — building trust through transparency.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============================================
+             RECIPIENT FLOW - 8 Steps
+             ============================================ -->
+        <div class="flow-content" id="recipient-flow">
+          <div class="timeline-container">
+            <div class="timeline-line"></div>
+
+            <!-- Step 1: Sign Up -->
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+              <div class="step-node">1</div>
+              <div class="step-card">
+                <div class="step-header">
+                  <div class="step-icon">
+                    <i class="fa-solid fa-user-plus"></i>
+                  </div>
+                  <h4 class="step-title">Sign Up</h4>
+                </div>
+                <p class="step-description">
+                  Create your account using <strong>Google</strong> or <strong>Email</strong> if you're a new user.
+                  Existing users can log in directly.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 2: Complete Profile with ID -->
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="150">
+              <div class="step-node">2</div>
+              <div class="step-card">
+                <div class="step-header">
+                  <div class="step-icon">
+                    <i class="fa-solid fa-id-card"></i>
+                  </div>
+                  <h4 class="step-title">Complete Profile &amp; Verify ID</h4>
+                </div>
+                <p class="step-description">
+                  Submit a valid <strong>ID document</strong> for verification. This ID is securely reviewed and
+                  <strong>automatically deleted</strong> after verification to protect your privacy.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 3: Submit Blood Request -->
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+              <div class="step-node">3</div>
+              <div class="step-card">
+                <div class="step-header">
+                  <div class="step-icon">
+                    <i class="fa-solid fa-file-medical"></i>
+                  </div>
+                  <h4 class="step-title">Submit Blood Request</h4>
+                </div>
+                <p class="step-description">
+                  Create a request for yourself or <strong>blood relatives only</strong>. You must attach the official
+                  <strong>Blood Requisition Form</strong> provided by the hospital.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 4: Staff Reviews -->
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="250">
+              <div class="step-node">4</div>
+              <div class="step-card">
+                <div class="step-header">
+                  <div class="step-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </div>
+                  <h4 class="step-title">Staff Reviews Request</h4>
+                </div>
+                <p class="step-description">
+                  Foundation staff carefully reviews your documents. They <strong>recommend approval</strong> based on
+                  the authenticity of submitted forms and urgency level.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 5: Request Goes Live -->
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+              <div class="step-node">5</div>
+              <div class="step-card">
+                <div class="step-header">
+                  <div class="step-icon">
+                    <i class="fa-solid fa-bell"></i>
+                  </div>
+                  <h4 class="step-title">Request Visible to Donors</h4>
+                </div>
+                <p class="step-description">
+                  After staff recommendation, your request becomes visible to <strong>nearby verified donors</strong>.
+                  They receive push notifications based on blood type compatibility.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 6: Donor Accepts -->
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="350">
+              <div class="step-node">6</div>
+              <div class="step-card">
+                <div class="step-header">
+                  <div class="step-icon">
+                    <i class="fa-solid fa-handshake"></i>
+                  </div>
+                  <h4 class="step-title">Donor Accepts Request</h4>
+                </div>
+                <p class="step-description">
+                  When a donor accepts, you receive a <strong>notification</strong>. The donor proceeds to the hospital
+                  and donates blood. They upload proof after donation.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 7: Claim from Hospital -->
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+              <div class="step-node">7</div>
+              <div class="step-card">
+                <div class="step-header">
+                  <div class="step-icon">
+                    <i class="fa-solid fa-hospital-user"></i>
+                  </div>
+                  <h4 class="step-title">Claim Blood from Hospital</h4>
+                </div>
+                <p class="step-description">
+                  You're informed when the donation is complete. Proceed to the <strong>hospital or blood bank</strong>
+                  to claim the blood using proper hospital protocols.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 8: Request Completed -->
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="450">
+              <div class="step-node">8</div>
+              <div class="step-card">
+                <div class="step-header">
+                  <div class="step-icon">
+                    <i class="fa-solid fa-check-double"></i>
+                  </div>
+                  <h4 class="step-title">Request Completed</h4>
+                </div>
+                <p class="step-description">
+                  Mark your request as complete. The entire transaction is logged, and both parties contribute to
+                  building the <strong>trusted donor community</strong>.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recipient Flow Completion -->
+          <div class="flow-complete" data-aos="zoom-in" data-aos-delay="500">
+            <i class="fa-solid fa-heart"></i>
+            <h4>Request Fulfilled!</h4>
+            <p>Thank you for trusting Blood Link. Consider becoming a donor to help others!</p>
+          </div>
+
+          <!-- Important Notes for Recipients -->
+          <div class="important-note" data-aos="fade-up" data-aos-delay="550">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <div class="important-note-content">
+              <h4>Blood Link is a Coordination Layer</h4>
+              <p><strong>Important:</strong> Blood Link is NOT a blood bank. All donations happen exclusively through
+                verified hospitals and blood banks. There is no direct contact between donors and recipients to prevent
+                blood trafficking/selling. This ensures safety, traceability, and compliance with medical regulations.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trust Badges -->
+        <div class="trust-badges" data-aos="fade-up" data-aos-delay="200">
+          <div class="trust-badge">
+            <i class="fa-solid fa-shield-check"></i>
+            <span>Verified Hospitals Only</span>
+          </div>
+          <div class="trust-badge">
+            <i class="fa-solid fa-user-shield"></i>
+            <span>No Direct Contact</span>
+          </div>
+          <div class="trust-badge">
+            <i class="fa-solid fa-lock"></i>
+            <span>Privacy Protected</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ==== / Complete Workflow Section End ==== -->
+
+
+    <!-- ==== Features Section Start ==== -->
+    <section class="service-three section-space" style="background: #fff;">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-8">
+            <div class="section__header text-center" style="margin-bottom: 60px;">
+              <span class="sub-title-two" style="color: #D72323;">Combined Features</span>
+              <h2 class="title-animation">Simplicity Meets Power</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row gutter-30">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="feature-card-premium" data-tilt="" data-aos="fade-up" data-aos-delay="100">
+              <div class="feature-icon-box">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <h5 class="feature-title">Location Discovery</h5>
+              <p class="feature-desc">Find verified requests nearby with configurable 5km, 10km, or 20km detection
+                radius.</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="feature-card-premium" data-tilt="" data-aos="fade-up" data-aos-delay="200">
+              <div class="feature-icon-box">
+                <i class="fa-solid fa-droplet"></i>
+              </div>
+              <h5 class="feature-title">Smart Matching</h5>
+              <p class="feature-desc">Intelligent filtering ensures donors only see requests compatible with their blood
+                type.</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="feature-card-premium" data-tilt="" data-aos="fade-up" data-aos-delay="300">
+              <div class="feature-icon-box">
+                <i class="fa-solid fa-bell"></i>
+              </div>
+              <h5 class="feature-title">Instant Alerts</h5>
+              <p class="feature-desc">Get immediate Firebase push notifications when a verified request matches your
+                profile.</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="feature-card-premium" data-tilt="" data-aos="fade-up" data-aos-delay="400">
+              <div class="feature-icon-box">
+                <i class="fa-solid fa-user-check"></i>
+              </div>
+              <h5 class="feature-title">Trust &amp; Verify</h5>
+              <p class="feature-desc">Strict profile verification and request validation by foundation staff.</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="feature-card-premium" data-tilt="" data-aos="fade-up" data-aos-delay="500">
+              <div class="feature-icon-box">
+                <i class="fa-solid fa-hourglass-half"></i>
+              </div>
+              <h5 class="feature-title">Safety Cooldown</h5>
+              <p class="feature-desc">Automatic 3-month waiting period enforcement to ensure donor health and safety.
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="feature-card-premium" data-tilt="" data-aos="fade-up" data-aos-delay="600">
+              <div class="feature-icon-box">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+              <h5 class="feature-title">Impact Tracking</h5>
+              <p class="feature-desc">Track your net contribution score: total donations made minus requests created.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ==== / Features Section End ==== -->
+
+    <!-- ==== Gamification / Donor Levels Section Start ==== -->
+    <section class="gamification-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-8">
+            <div class="section__header text-center" style="margin-bottom: 60px;">
+              <span class="sub-title-two" style="color: #D72323;">Recognition</span>
+              <h2 class="title-animation" style="color: #fff;">Donor Recognition Tiers</h2>
+              <p style="color: #bbb; margin-top: 15px;">Earn badges and leveling upgrades as you save more lives.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row gutter-30">
+          <div class="col-12 col-lg-4">
+            <div class="badge-card tier-bronze" data-tilt="" data-aos="fade-up" data-aos-delay="100">
+              <div class="badge-icon">
+                <i class="fa-solid fa-medal"></i>
+              </div>
+              <h3 class="badge-title">Bronze Donor</h3>
+              <div class="badge-req">1 Donation</div>
+              <p class="badge-desc">The start of a heroic journey.</p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="badge-card tier-silver" data-tilt="" data-aos="fade-up" data-aos-delay="200">
+              <div class="badge-icon">
+                <i class="fa-solid fa-medal"></i>
+              </div>
+              <h3 class="badge-title">Silver Donor</h3>
+              <div class="badge-req">5+ Donations</div>
+              <p class="badge-desc">A committed guardian of life.</p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="badge-card tier-gold" data-tilt="" data-aos="fade-up" data-aos-delay="300">
+              <div class="badge-icon">
+                <i class="fa-solid fa-crown"></i>
+              </div>
+              <h3 class="badge-title">Gold Donor</h3>
+              <div class="badge-req">10+ Donations</div>
+              <p class="badge-desc">The ultimate symbol of selflessness.</p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="badge-card tier-platinum" data-tilt="" data-aos="fade-up" data-aos-delay="400">
+              <div class="badge-icon">
+                <i class="fa-solid fa-gem"></i>
+              </div>
+              <h3 class="badge-title">Platinum Donor</h3>
+              <div class="badge-req">15+ Donations</div>
+              <p class="badge-desc">An elite savior of the community.</p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="badge-card tier-hero" data-tilt="" data-aos="fade-up" data-aos-delay="500">
+              <div class="badge-icon">
+                <i class="fa-solid fa-shield-cat"></i>
+              </div>
+              <h3 class="badge-title">Hero Donor</h3>
+              <div class="badge-req">25+ Donations</div>
+              <p class="badge-desc">A living legend of humanity.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ==== / Gamification / Donor Levels Section End ==== -->
+
+    <!-- ==== App Gallery Section Start ==== -->
+    <section class="app-gallery-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-8">
+            <div class="section__header text-center" style="margin-bottom: 40px;">
+              <span class="sub-title-two" style="color: #D72323;">App Interface</span>
+              <h2 class="title-animation">Visual Walkthrough</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper swiper-gallery">
+        <div class="swiper-wrapper">
+          <!-- 1. Sign In / Onboarding -->
+          <div class="swiper-slide">
+            <img src="../assets/images/apps/blood-link-app/signin-signup.jpeg" alt="Sign In &amp; Sign Up">
+            <div class="slide-caption">Secure Sign In</div>
+          </div>
+          <!-- 2. Complete Profile -->
+          <div class="swiper-slide">
+            <img src="../assets/images/apps/blood-link-app/complete-profile.jpeg" alt="Complete Profile">
+            <div class="slide-caption">Complete Your Profile</div>
+          </div>
+          <!-- 3. Dashboard View 1 -->
+          <div class="swiper-slide">
+            <img src="../assets/images/apps/blood-link-app/dashboard1.jpeg" alt="Dashboard">
+            <div class="slide-caption">Donor Dashboard</div>
+          </div>
+          <!-- 4. Dashboard View 2 -->
+          <div class="swiper-slide">
+            <img src="../assets/images/apps/blood-link-app/dashboard2.jpeg" alt="Dashboard Stats">
+            <div class="slide-caption">Dashboard Overview</div>
+          </div>
+          <!-- 5. Quick Access Menu -->
+          <div class="swiper-slide">
+            <img src="../assets/images/apps/blood-link-app/pages-shortcut.jpeg" alt="Quick Access">
+            <div class="slide-caption">Quick Access Menu</div>
+          </div>
+          <!-- 6. Blood Donation Request -->
+          <div class="swiper-slide">
+            <img src="../assets/images/apps/blood-link-app/blood-donation-request.jpeg" alt="Blood Request">
+            <div class="slide-caption">Blood Donation Request</div>
+          </div>
+          <!-- 7. Map View - Request Discovery -->
+          <div class="swiper-slide">
+            <img src="../assets/images/apps/blood-link-app/donation-request-map-view.jpeg" alt="Map View">
+            <div class="slide-caption">Find Nearby Requests</div>
+          </div>
+          <!-- 8. Nearby Requests Map -->
+          <div class="swiper-slide">
+            <img src="../assets/images/apps/blood-link-app/near-by-request-map.jpeg" alt="Nearby Map">
+            <div class="slide-caption">Nearby Requests Map</div>
+          </div>
+          <!-- 9. Nearby Requests List -->
+          <div class="swiper-slide">
+            <img src="../assets/images/apps/blood-link-app/near-by-request-list.jpeg" alt="Nearby List">
+            <div class="slide-caption">Nearby Requests List</div>
+          </div>
+          <!-- 10. Hospital Selection Map -->
+          <div class="swiper-slide">
+            <img src="../assets/images/apps/blood-link-app/map-select-hospital.jpeg" alt="Select Hospital">
+            <div class="slide-caption">Select Hospital Location</div>
+          </div>
+          <!-- 11. Community Contribution 1 -->
+          <div class="swiper-slide">
+            <img src="../assets/images/apps/blood-link-app/comunity-contribution1.jpeg" alt="Community">
+            <div class="slide-caption">Community Contribution</div>
+          </div>
+          <!-- 12. Community Contribution 2 -->
+          <div class="swiper-slide">
+            <img src="../assets/images/apps/blood-link-app/comunity-contribution2.jpeg" alt="Community Stats">
+            <div class="slide-caption">Community Impact</div>
+          </div>
+          <!-- 13. My Requests -->
+          <div class="swiper-slide">
+            <img src="../assets/images/apps/blood-link-app/my-requests.jpeg" alt="My Requests">
+            <div class="slide-caption">Track Your Requests</div>
+          </div>
+          <!-- 14. My Donations View 1 -->
+          <div class="swiper-slide">
+            <img src="../assets/images/apps/blood-link-app/my-donations.jpeg" alt="My Donations">
+            <div class="slide-caption">My Donations</div>
+          </div>
+          <!-- 15. My Donations View 2 -->
+          <div class="swiper-slide">
+            <img src="../assets/images/apps/blood-link-app/my-donations2.jpeg" alt="Donation History">
+            <div class="slide-caption">Donation History</div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+    <!-- ==== / App Gallery Section End ==== -->
+
+    <!-- ==== App Showcase Section Start ==== -->
+    <section class="about-us-three section-space" style="background: #f9f9f9; padding-bottom: 100px;">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 col-lg-6">
+            <div class="about-us-three__thumb" data-aos="fade-right" data-aos-duration="1000">
+              <!-- Placeholder for detailed app showcase image -->
+              <img src="../assets/images/apps/blood-link-app/complete-profile.jpeg" alt="Bloodlink App Showcase" style="width: 100%; max-width: 450px; border-radius: 20px; border: 8px solid #fff; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="about-us-three__content" style="padding-left: 20px;">
+              <span class="sub-title-two" style="color: #D72323;">Our Mission</span>
+              <h2 class="title-animation" style="margin-bottom: 30px;">Transparency &amp; Trust</h2>
+              <p style="font-size: 1.1rem; color: #555; margin-bottom: 30px;">
+                Designed by the Family &amp; Fellows Foundation, Blood Link addresses the critical challenge of connection.
+                We verify every request to ensure donation integrity, allowing donors to track their net contribution
+                score
+                and see the real impact of their generosity.
+              </p>
+
+              <ul class="app-showcase-list">
+                <li><i class="fa-solid fa-check"></i> Verified Requests &amp; Profiles</li>
+                <li><i class="fa-solid fa-check"></i> Instant Push Notifications</li>
+                <li><i class="fa-solid fa-check"></i> 3-Month Donation Safety Cooldown</li>
+              </ul>
+
+              <div style="margin-top: 40px;">
+                <a href="../contact/" class="btn--secondary">Contact Support</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ==== / App Showcase Section End ==== -->
+
+
+    <!-- ==== footer start ==== -->
+    <footer class="footer-two">
+      <div class="container">
+        <div class="row align-items-center gutter-30">
+          <div class="col-12 col-lg-7 col-xxl-6">
+            <div class="footer-two__newsletter-content">
+              <h3 class="title-animation">Stay Connected With Our Mission</h3>
+              <p>Get updates on our latest projects and community impact</p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-5 col-xxl-5 offset-xxl-1">
+            <div class="footer-two__newsletter-form">
+              <form action="#" method="post">
+                <input type="email" required="" name="subscribe-email" id="subscribeEmail" placeholder="Enter Email">
+                <button type="submit" aria-label="subscribe to our newsletter" title="subscribe to our newsletter" class="btn--primary">
+                  <i class="fa-solid fa-paper-plane"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <hr class="divider">
+          </div>
+        </div>
+        <div class="row gutter-60">
+          <div class="col-12 col-md-6 col-xl-3">
+            <div class="footer-two__widget" data-aos="fade-up" data-aos-duration="1000">
+              <div class="footer-two__widget-logo">
+                <a href="../">
+                  <img src="../assets/images/logo-light.png" alt="Image">
+                </a>
+              </div>
+              <div class="footer-two__widget-content">
+                <p>
+                  Family &amp; Fellows Foundation is dedicated to empowering
+                  communities through Educational Excellence, Health Care
+                  Initiatives, and Food for All Programs.
+                </p>
+                <div class="social">
+                  <a href="https://www.instagram.com/family_and_fellows_foundation/#" target="_blank" aria-label="share us on instagram" title="instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                  <a href="https://www.tiktok.com/@family.and.fellow" target="_blank" aria-label="share us on tiktok" title="tiktok">
+                    <i class="fa-brands fa-tiktok"></i>
+                  </a>
+                  <a href="https://x.com/familyandfellow" target="_blank" aria-label="share us on twitter" title="twitter">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                </div>
+              <ul class="moved-footer-links" style="margin-top: 20px;"><li><a href="../terms-conditions/"><i class="fa-solid fa-angle-right"></i>Terms &amp; Conditions</a></li><li><a href="../privacy-policy/"><i class="fa-solid fa-angle-right"></i>Privacy Policy</a></li></ul></div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-xl-2 offset-xl-1">
+            <div class="footer-two__widget" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+              <div class="footer-two__widget-intro">
+                <h5>Quick Links</h5>
+                <div class="line">
+                  <span class="large-line"></span>
+                  <span class="small-line"></span>
+                  <span class="small-line"></span>
+                </div>
+              </div>
+              <div class="footer-two__widget-content">
+                <ul>
+                  <li><a href="../"><i class="fa-solid fa-arrow-right"></i>Home</a></li>
+                  <li><a href="../about/"><i class="fa-solid fa-arrow-right"></i>About Us</a></li>
+                  <li><a href="../become-volunteer/"><i class="fa-solid fa-arrow-right"></i>Become a Volunteer</a></li>
+                  <li><a href="../about/team/"><i class="fa-solid fa-arrow-right"></i>Team</a></li>
+                  <li><a href="../blogs/"><i class="fa-solid fa-arrow-right"></i>Blogs</a></li>
+                  <li><a href="../faq/"><i class="fa-solid fa-arrow-right"></i>FAQ</a></li>
+                  <li><a href="../shop/"><i class="fa-solid fa-arrow-right"></i>Shop</a></li>
+                  <li><a href="../bloodlink/" class="nav-bloodlink" style="color: #D72323 !important; font-weight: 700;"><i class="fa-solid fa-arrow-right"></i>Bloodlink</a></li>
+                  <li><a href="https://portal-lime-iota.vercel.app/" target="_blank" class="nav-portal" style="color: #0056b3 !important; font-weight: 700;"><i class="fa-solid fa-arrow-right"></i>Portal</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-xl-3">
+            <div class="footer-two__widget footer-two__widget--alternate" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+              <div class="footer-two__widget-intro">
+                <h5>Our Causes</h5>
+                <div class="line">
+                  <span class="large-line"></span>
+                  <span class="small-line"></span>
+                  <span class="small-line"></span>
+                </div>
+              </div>
+              <div class="footer-two__widget-content">
+                <ul>
+                  <li><a href="../our-causes/education/"><i class="fa-solid fa-arrow-right"></i>Education Support</a>
+                  </li>
+                  <li><a href="../our-causes/food-for-all/"><i class="fa-solid fa-arrow-right"></i>Food Support</a></li>
+                  <li><a href="../our-causes/health-care/"><i class="fa-solid fa-arrow-right"></i>Health Support</a>
+                  </li>
+                  <li><a href="../our-causes/disaster-management/"><i class="fa-solid fa-arrow-right"></i>Disaster
+                      Management</a></li>
+                  <li><a href="../our-causes/social-welfare/marriage-assistance-details/"><i class="fa-solid fa-arrow-right"></i>Social Welfare</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-xl-3">
+            <div class="footer-two__widget footer-two__widget--alternate" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+              <div class="footer-two__widget-intro">
+                <h5>Get In Touch</h5>
+                <div class="line">
+                  <span class="large-line"></span>
+                  <span class="small-line"></span>
+                  <span class="small-line"></span>
+                </div>
+              </div>
+              <div class="footer-two__widget-content footer-two__widget-content--contact">
+                <ul>
+                  <li>
+                    <a href="https://www.google.com/maps/dir//Al-Syed,+Main+Peshawar+Rd,+Naseerabad,+Rawalpindi,+48000/@33.6202076,72.8973212,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x38df978a4048a751:0xef6767a9b7ee77c3!2m2!1d72.9797224!2d33.6202349?entry=ttu&amp;g_ep=EgoyMDI1MTEwMi4wIKXMDSoASAFQAw%3D%3D" target="_blank"><i class="fa-solid fa-location-dot"></i>Al-Syed, Main Peshawar Rd, Naseerabad,
+                      Rawalpindi, 48000, Pakistan</a>
+                  </li>
+                  <li><a href="tel:+923268484360"><i class="fa-solid fa-phone"></i>+92 326 8484360</a></li>
+                  <li><a href="mailto:info@familyandfellowsfoundation.org"><i class="fa-regular fa-envelope"></i>info@familyandfellowsfoundation.org</a></li>
+                  <li>
+                    <p>Registered with SECP Pakistan &amp; Punjab Charity Commission</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-two__copyright">
+        <div class="container">
+          <div class="row align-items-center gutter-12">
+            <div class="col-12 col-lg-6">
+              <div class="footer-two__copyright-inner text-center text-lg-start"><p><a href="https://www.familyandfellowsfoundation.org/" style="color: inherit; text-decoration: none;">Familyand Fellows Foundation</a> © 2024 All Rights Reserved</p></div>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div class="footer__bottom-left">
+                
+              <div class="footer__bottom-credits" style="text-align: right; margin-top: 10px; font-size: 14px;"><p>Designed and Developed by <a href="https://www.apexitsolutions.co/" target="_blank" style="color: inherit; text-decoration: none;"><strong>Apex IT Solutions</strong></a> &amp; <a href="https://apexmarketings.com/" target="_blank" style="color: inherit; text-decoration: none;"><strong>Apex Marketings</strong></a></p></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sprade" data-aos="zoom-in" data-aos-duration="1000">
+        <img src="../assets/images/sprade.png" alt="Image" class="base-img">
+      </div>
+      <div class="sprade-light" data-aos="zoom-in" data-aos-duration="1000">
+        <img src="../assets/images/sprade-light.png" alt="Image">
+      </div>
+    </footer>
+    <!-- ==== / footer end ==== -->
+    <!-- ==== custom cursor start ==== -->
+    <div class="mouseCursor cursor-outer"></div>
+    <div class="mouseCursor cursor-inner"></div>
+    <!-- ==== / custom cursor end ==== -->
+    <!-- ==== scroll to top start ==== -->
+    <button class="progress-wrap" aria-label="scroll indicator" title="back to top">
+      <span></span>
+      <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
+      </svg>
+    </button>
+    <!-- ==== / scroll to top end ==== -->
+    <!-- ==== color switcher start ==== -->
+    <div class="color-palate">
+      <button class="color-trigger">
+        <i class="fa-solid fa-gear"></i>
+      </button>
+      <button class="close-color-trigger">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="color-palate-inner">
+        <div class="various-color clearfix">
+          <h6>Multiple Colors</h6>
+          <br>
+          <div class="colors-list">
+            <span class="palate default-color active" data-theme-file="../assets/css/default-theme.css"></span>
+            <span class="palate blue-color" data-theme-file="../assets/css/blue-theme.css"></span>
+            <span class="palate brown-color" data-theme-file="../assets/css/brown-theme.css"></span>
+            <span class="palate green-color" data-theme-file="../assets/css/green-theme.css"></span>
+            <span class="palate orange-color" data-theme-file="../assets/css/orange-theme.css"></span>
+            <span class="palate purple-color" data-theme-file="../assets/css/purple-theme.css"></span>
+            <span class="palate teal-color" data-theme-file="../assets/css/teal-theme.css"></span>
+            <span class="palate yellow-color" data-theme-file="../assets/css/yellow-theme.css"></span>
+          </div>
+        </div>
+        <h6>RTL Version</h6>
+        <ul class="rtl-version option-box">
+          <li class="rtl">RTL Version</li>
+          <li>LTR Version</li>
+        </ul>
+        <h6>Boxed Version</h6>
+        <ul class="box-version option-box">
+          <li class="box">Boxed</li>
+          <li>Full width</li>
+        </ul>
+        <h6>Sticky Header</h6>
+        <ul class="header-version option-box">
+          <li class="box">Yes</li>
+          <li>No</li>
+        </ul>
+        <h6>Dark Verion</h6>
+        <ul class="dark-version option-box">
+          <li class="box">Yes</li>
+          <li>No</li>
+        </ul>
+        <div class="purchase-box">
+          <p>
+            You will find much more options for colors and styling in admin
+            panel. This color picker is used only for demonstration purposes.
+          </p>
+          <a href="" class="purchase-box__btn">buy now</a>
+        </div>
+      </div>
+    </div>
+    <!-- ==== / color switcher end ==== -->
+  </div>
+  <!-- ==== js dependencies start ==== -->
+  <!-- jquery -->
+  <script src="../assets/js/jquery-3.7.1.min.js"></script>
+  <!-- bootstrap five js -->
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+  <!-- nice select js -->
+  <script src="../assets/js/jquery.nice-select.min.js"></script>
+  <!-- magnific popup js -->
+  <script src="../assets/js/jquery.magnific-popup.min.js"></script>
+  <!-- swiper slider js -->
+  <script src="../assets/js/swiper-bundle.min.js"></script>
+  <!-- viewport js -->
+  <script src="../assets/js/viewport.jquery.js"></script>
+  <!-- odometer js -->
+  <script src="../assets/js/odometer.min.js"></script>
+  <!-- vanilla tilt js -->
+  <script src="../assets/js/vanilla-tilt.min.js"></script>
+  <!-- aos js -->
+  <script src="../assets/js/aos.js"></script>
+  <!-- splittext js -->
+  <script src="../assets/js/SplitText.min.js"></script>
+  <!-- scrollto js -->
+  <script src="../assets/js/ScrollToPlugin.min.js"></script>
+  <!-- scrolltrigger js -->
+  <script src="../assets/js/ScrollTrigger.min.js"></script>
+  <!-- gsap js -->
+  <script src="../assets/js/gsap.min.js"></script>
+  <!-- ==== / js dependencies end ==== -->
+  <!-- template settings js -->
+  <script src="../assets/js/template-settings.js"></script>
+  <!-- main js -->
+  <script src="../assets/js/custom.js"></script>
+
+  <!-- External/Custom Scripts for Animations -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+      // Initialize VanillaTilt for Premium Cards
+      if (typeof VanillaTilt !== 'undefined') {
+        VanillaTilt.init(document.querySelectorAll(".feature-card-premium"), {
+          max: 12,
+          speed: 400,
+          glare: true,
+          "max-glare": 0.1,
+          scale: 1.02,
+          perspective: 1000
+        });
+      }
+
+      // Use AOS for animations instead of custom GSAP to avoid conflicts
+      // The theme's AOS.init() in custom.js handles the [data-aos] attributes
+
+      // Initialize Swiper for 3D Gallery
+      if (typeof Swiper !== 'undefined') {
+        var gallerySwiper = new Swiper(".swiper-gallery", {
+          effect: "coverflow",
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: "auto",
+          initialSlide: 1, /* Start at Dashboard */
+          loop: true,
+          coverflowEffect: {
+            rotate: 0, /* Flat facing nicely */
+            stretch: 0,
+            depth: 150, /* Moderate depth */
+            modifier: 2, /* Enhance the effect slightly */
+            slideShadows: true,
+          },
+          autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+        });
+      }
+
+      // ========================================
+      // Workflow Flow Tab Switching
+      // ========================================
+      const flowTabs = document.querySelectorAll('.flow-tab');
+      const flowContents = document.querySelectorAll('.flow-content');
+
+      flowTabs.forEach(tab => {
+        tab.addEventListener('click', function () {
+          const targetFlow = this.getAttribute('data-flow');
+
+          // Remove active class from all tabs and contents
+          flowTabs.forEach(t => t.classList.remove('active'));
+          flowContents.forEach(c => c.classList.remove('active'));
+
+          // Add active class to clicked tab
+          this.classList.add('active');
+
+          // Show corresponding content
+          const targetContent = document.getElementById(targetFlow + '-flow');
+          if (targetContent) {
+            targetContent.classList.add('active');
+
+            // Refresh AOS animations for the new content
+            if (typeof AOS !== 'undefined') {
+              setTimeout(() => {
+                AOS.refresh();
+              }, 100);
+            }
+          }
+        });
+      });
+
+      // ========================================
+      // Initialize VanillaTilt for Step Cards
+      // ========================================
+      if (typeof VanillaTilt !== 'undefined') {
+        VanillaTilt.init(document.querySelectorAll(".step-card"), {
+          max: 5,
+          speed: 400,
+          glare: true,
+          "max-glare": 0.05,
+          scale: 1.01
+        });
+
+        VanillaTilt.init(document.querySelectorAll(".badge-card"), {
+          max: 8,
+          speed: 400,
+          glare: true,
+          "max-glare": 0.1
+        });
+      }
+    });
+  </script>
+
+
+</body></html>
