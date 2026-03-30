@@ -1,0 +1,2802 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../assets/images/favicon.png" type="image/x-icon">
+    <title>Find Blood Donors in Islamabad &amp; Rawalpindi – Fast &amp; Free | Blood Link</title>
+    <meta name="description"
+        content="Blood Link connects blood donors and patients during emergencies across Pakistan. Currently active in Islamabad & Rawalpindi. Download the free Android app now.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- AOS Animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+    <style>
+        /* =============================================
+       FULL RESET — no site CSS loaded on this page
+       ============================================= */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            color: #444;
+            background: #fff;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* ── VARIABLES ── */
+        :root {
+            --red: #8B0000;
+            --red-d: #610000;
+            --red-bg: rgba(139, 0, 0, 0.1);
+            --dark: #111;
+            --mid: #1a1a1a;
+            --grey: #f5f5f5;
+        }
+
+        /* ── BOOTSTRAP-LIKE GRID only ── */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -12px;
+        }
+
+        .col-12 {
+            flex: 0 0 100%;
+            max-width: 100%;
+            padding: 0 12px;
+        }
+
+        @media (min-width: 576px) {
+            .col-sm-6 {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .col-md-3 {
+                flex: 0 0 25%;
+                max-width: 25%;
+            }
+
+            .col-md-6 {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .col-lg-5 {
+                flex: 0 0 41.666%;
+                max-width: 41.666%;
+            }
+
+            .col-lg-6 {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+
+            .col-lg-7 {
+                flex: 0 0 58.333%;
+                max-width: 58.333%;
+            }
+        }
+
+        .g-3 {
+            gap: 16px;
+        }
+
+        .g-4 {
+            gap: 24px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .mb-5 {
+            margin-bottom: 48px;
+        }
+
+        .mt-2 {
+            margin-top: 16px;
+        }
+
+        .mt-4 {
+            margin-top: 32px;
+        }
+
+        .mt-5 {
+            margin-top: 48px;
+        }
+
+        .align-items-center {
+            align-items: center;
+        }
+
+        /* ── BUTTONS ── */
+        .btn-red {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--red);
+            color: #fff;
+            padding: 15px 34px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 8px 24px rgba(139, 0, 0, 0.35);
+        }
+
+        .btn-red:hover {
+            background: var(--red-d);
+            transform: translateY(-3px);
+            box-shadow: 0 14px 30px rgba(139, 0, 0, 0.45);
+            color: #fff;
+        }
+
+        .btn-outline {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: transparent;
+            color: var(--dark);
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            border: 2px solid rgba(0, 0, 0, 0.18);
+            transition: border-color 0.3s, color 0.3s, transform 0.3s;
+        }
+
+        .btn-outline:hover {
+            border-color: var(--red);
+            color: var(--red);
+            transform: translateY(-3px);
+        }
+
+        .btn-white {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #fff;
+            color: var(--red);
+            padding: 15px 36px;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-white:hover {
+            background: #f0f0f0;
+            transform: translateY(-3px);
+            color: var(--red);
+        }
+
+        /* ── SECTION HEADER ── */
+        .s-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--red);
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            margin-bottom: 12px;
+        }
+
+        .s-eyebrow::before,
+        .s-eyebrow::after {
+            content: '';
+            display: block;
+            height: 2px;
+            width: 28px;
+            background: var(--red);
+            border-radius: 2px;
+            opacity: 0.5;
+        }
+
+        .s-title {
+            font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+            font-weight: 900;
+            color: var(--dark);
+            letter-spacing: -0.5px;
+            line-height: 1.15;
+            margin-bottom: 14px;
+        }
+
+        .s-sub {
+            font-size: 1.05rem;
+            color: #666;
+            line-height: 1.7;
+            max-width: 540px;
+        }
+
+        .s-sub.centered {
+            margin: 0 auto;
+        }
+
+        /* ════════════════════════════════
+       NAVBAR
+       ════════════════════════════════ */
+        .ad-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 40px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--red);
+        }
+
+        .nav-logo i {
+            font-size: 1.5rem;
+        }
+
+        @media (max-width: 480px) {
+            .ad-nav {
+                padding: 12px 16px;
+            }
+        }
+
+        /* ════════════════════════════════
+       HERO
+       ════════════════════════════════ */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 130px 0 80px;
+            background:
+                radial-gradient(ellipse at 80% 10%, rgba(139, 0, 0, 0.06) 0%, transparent 50%),
+                radial-gradient(ellipse at 10% 90%, rgba(139, 0, 0, 0.04) 0%, transparent 45%),
+                #fff;
+            overflow: hidden;
+        }
+
+        /* Decorative rings */
+        .hero::before,
+        .hero::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            border: 1.5px solid rgba(139, 0, 0, 0.07);
+            pointer-events: none;
+        }
+
+        .hero::before {
+            width: 640px;
+            height: 640px;
+            top: -180px;
+            right: -160px;
+            animation: rpulse 6s ease-in-out infinite;
+        }
+
+        .hero::after {
+            width: 900px;
+            height: 900px;
+            top: -300px;
+            right: -280px;
+            animation: rpulse 6s ease-in-out infinite 1.5s;
+        }
+
+        @keyframes rpulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 0.6;
+            }
+
+            50% {
+                transform: scale(1.04);
+                opacity: 1;
+            }
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--red-bg);
+            color: var(--red);
+            border: 1px solid rgba(139, 0, 0, 0.25);
+            padding: 7px 18px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.88rem;
+            margin-bottom: 22px;
+        }
+
+        .hero-badge .fa-heart-pulse {
+            animation: hb 1.4s ease-in-out infinite;
+        }
+
+        @keyframes hb {
+
+            0%,
+            100% {
+                transform: scale(1)
+            }
+
+            14% {
+                transform: scale(1.35)
+            }
+
+            28% {
+                transform: scale(1)
+            }
+
+            42% {
+                transform: scale(1.2)
+            }
+
+            56% {
+                transform: scale(1)
+            }
+        }
+
+        .hero-title {
+            font-size: clamp(2rem, 4.5vw, 4rem);
+            font-weight: 900;
+            line-height: 1.1;
+            color: var(--dark);
+            margin-bottom: 22px;
+            letter-spacing: -1px;
+        }
+
+        .hero-title .accent {
+            color: var(--red);
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero-title .accent::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 3px;
+            width: 100%;
+            height: 9px;
+            background: rgba(139, 0, 0, 0.12);
+            z-index: -1;
+            transform: skewX(-10deg);
+        }
+
+        .hero-desc {
+            font-size: 1.15rem;
+            color: #555;
+            line-height: 1.7;
+            max-width: 520px;
+            margin-bottom: 36px;
+        }
+
+        .hero-btns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        /* ── PHONE MOCKUP ── */
+        .hero-phone {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            perspective: 1200px;
+        }
+
+        .phone-frame {
+            position: relative;
+            width: 280px;
+            padding: 14px 14px 14px 14px;
+            background: linear-gradient(145deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+            border-radius: 42px;
+            box-shadow:
+                0 0 0 2px rgba(255, 255, 255, 0.08),
+                0 30px 60px -10px rgba(0, 0, 0, 0.35),
+                0 0 80px rgba(139, 0, 0, 0.12);
+            animation: phoneFloat 5s ease-in-out infinite;
+            transition: transform 0.4s ease;
+        }
+
+        .phone-frame:hover {
+            transform: rotateY(-5deg) rotateX(3deg) scale(1.03);
+        }
+
+        /* Dynamic Island / Notch */
+        .phone-notch {
+            width: 100px;
+            height: 26px;
+            background: #111;
+            border-radius: 14px;
+            margin: 0 auto 8px;
+            position: relative;
+            z-index: 2;
+            box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .phone-notch::after {
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: radial-gradient(circle, #333, #222);
+            border-radius: 50%;
+            top: 50%;
+            right: 18px;
+            transform: translateY(-50%);
+        }
+
+        /* Screen */
+        .phone-screen {
+            border-radius: 28px;
+            overflow: hidden;
+            position: relative;
+            background: #000;
+        }
+
+        .phone-screen img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        /* Screen Gloss Overlay */
+        .phone-screen::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, transparent 50%, transparent 100%);
+            border-radius: 28px;
+            pointer-events: none;
+        }
+
+        /* Bottom Bar */
+        .phone-bar {
+            width: 100px;
+            height: 5px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+            margin: 10px auto 0;
+        }
+
+        /* Glow under phone */
+        .phone-glow {
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 60px;
+            background: radial-gradient(ellipse, rgba(139, 0, 0, 0.25) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: phoneFloat 5s ease-in-out infinite;
+            z-index: -1;
+        }
+
+        @keyframes phoneFloat {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-18px);
+            }
+        }
+
+        @media (max-width: 991px) {
+            .hero {
+                padding: 110px 0 60px;
+                text-align: center;
+            }
+
+            .hero-desc {
+                margin: 0 auto 32px;
+            }
+
+            .hero-btns {
+                justify-content: center;
+            }
+
+            .hero-phone {
+                margin-top: 40px;
+                /* Reset and add gap on mobile */
+            }
+        }
+
+        /* ════════════════════════════════
+       STATS
+       ════════════════════════════════ */
+        .stats {
+            padding: 80px 0;
+            background: var(--mid);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        @media (max-width: 767px) {
+            .stats-row {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 400px) {
+            .stats-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .stat-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 36px 16px;
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.03);
+            transition: background 0.3s, border-color 0.3s, transform 0.3s;
+            gap: 8px;
+        }
+
+        .stat-card:hover {
+            background: rgba(139, 0, 0, 0.08);
+            border-color: rgba(139, 0, 0, 0.35);
+            transform: translateY(-6px);
+        }
+
+        .stat-badge-pill {
+            display: inline-block;
+            background: var(--red);
+            color: #fff;
+            border-radius: 20px;
+            padding: 5px 14px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            box-shadow: 0 4px 15px rgba(139, 0, 0, 0.4);
+            letter-spacing: 0.5px;
+        }
+
+        .stat-num {
+            font-size: 3.4rem;
+            font-weight: 900;
+            color: #fff;
+            line-height: 1.1;
+            text-shadow: 0 0 20px rgba(139, 0, 0, 0.6);
+            margin: 8px 0 4px;
+        }
+
+        .stat-num.small-text {
+            font-size: 1.7rem;
+            line-height: 1.3;
+        }
+
+        .stat-lbl {
+            color: rgba(255, 255, 255, 0.65);
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        /* ════════════════════════════════
+       HOW IT WORKS
+       ════════════════════════════════ */
+        .how {
+            padding: 90px 0;
+            background: #fff;
+        }
+
+        .how .row {
+            gap: 40px 0;
+            align-items: flex-start;
+        }
+
+        .how-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 24px 26px;
+            border-radius: 18px;
+            background: #fff;
+            border: 1px solid #efefef;
+            margin-bottom: 16px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+            transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .how-step::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--red);
+            border-radius: 4px 0 0 4px;
+            transform: scaleY(0);
+            transform-origin: bottom;
+            transition: transform 0.3s;
+        }
+
+        .how-step:hover {
+            border-color: rgba(139, 0, 0, 0.2);
+            box-shadow: 0 8px 24px rgba(139, 0, 0, 0.08);
+            transform: translateX(6px);
+        }
+
+        .how-step:hover::before {
+            transform: scaleY(1);
+        }
+
+        .step-num {
+            flex-shrink: 0;
+            width: 50px;
+            height: 50px;
+            border-radius: 14px;
+            background: var(--red-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            font-weight: 900;
+            color: var(--red);
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .how-step:hover .step-num {
+            background: var(--red);
+            color: #fff;
+        }
+
+        .step-body .step-title {
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 5px;
+        }
+
+        .step-body .step-desc {
+            color: #777;
+            font-size: 0.93rem;
+            line-height: 1.6;
+        }
+
+        .how-cta {
+            margin-top: 16px;
+        }
+
+        /* ════════════════════════════════
+       CITY EXPANSION
+       ════════════════════════════════ */
+        .cities {
+            padding: 90px 0;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cities::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: rgba(139, 0, 0, 0.05);
+            top: -150px;
+            right: -150px;
+            pointer-events: none;
+        }
+
+        .cities .s-title {
+            color: #fff;
+        }
+
+        .cities .s-sub {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .cities-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 16px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 900px) {
+            .cities-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .cities-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .city-card {
+            border-radius: 18px;
+            padding: 26px 16px;
+            text-align: center;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .city-card.active {
+            background: rgba(139, 0, 0, 0.15);
+            border: 1px solid rgba(139, 0, 0, 0.4);
+        }
+
+        .city-card.upcoming {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px dashed rgba(255, 255, 255, 0.15);
+        }
+
+        .city-card:hover {
+            transform: translateY(-7px);
+        }
+
+        .city-emoji {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        .city-name {
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+
+        .pill-active {
+            display: inline-block;
+            background: var(--red);
+            color: #fff;
+            border-radius: 20px;
+            padding: 3px 12px;
+            font-size: 0.76rem;
+            font-weight: 700;
+        }
+
+        .pill-soon {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.65);
+            border-radius: 20px;
+            padding: 3px 12px;
+            font-size: 0.76rem;
+            font-weight: 700;
+        }
+
+        .cities-footer {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .cities-footer p {
+            color: rgba(255, 255, 255, 0.55);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        /* ════════════════════════════════
+       COMMUNITY
+       ════════════════════════════════ */
+        .community {
+            padding: 90px 0;
+            background: #f7f7f7;
+        }
+
+        .community .s-sub {
+            margin: 0 auto 0;
+            text-align: center;
+        }
+
+        .contrib-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 900px) {
+            .contrib-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contrib-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .c-card {
+            background: #fff;
+            border-radius: 18px;
+            padding: 30px 24px;
+            border: 1px solid #efefef;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+            transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+        }
+
+        .c-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 14px 36px rgba(139, 0, 0, 0.1);
+            border-color: rgba(139, 0, 0, 0.18);
+        }
+
+        .c-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 16px;
+            background: var(--red-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            color: var(--red);
+            margin-bottom: 18px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .c-card:hover .c-icon {
+            background: var(--red);
+            color: #fff;
+        }
+
+        .c-title {
+            font-size: 1rem;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 7px;
+        }
+
+        .c-desc {
+            font-size: 0.9rem;
+            color: #777;
+            line-height: 1.6;
+        }
+
+        .community-footer {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        /* ════════════════════════════════
+       URGENCY
+       ════════════════════════════════ */
+        .urgency {
+            padding: 90px 0;
+            background: var(--red);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .urgency::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.12) 0%, transparent 70%);
+        }
+
+        .urgency>* {
+            position: relative;
+            z-index: 1;
+        }
+
+        .urgency-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 2.4rem;
+            animation: upulse 2s ease-in-out infinite;
+        }
+
+        @keyframes upulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.3)
+            }
+
+            50% {
+                transform: scale(1.07);
+                box-shadow: 0 0 0 18px rgba(255, 255, 255, 0)
+            }
+        }
+
+        .urgency-title {
+            font-size: clamp(1.7rem, 3.5vw, 3rem);
+            font-weight: 900;
+            color: #fff;
+            margin-bottom: 14px;
+            letter-spacing: -0.5px;
+        }
+
+        .urgency-sub {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.7;
+            max-width: 580px;
+            margin: 0 auto 36px;
+        }
+
+        /* ════════════════════════════════
+       TRUST
+       ════════════════════════════════ */
+        .trust {
+            padding: 70px 0;
+            background: #fff;
+        }
+
+        .trust-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .trust-pill {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: #f5f5f5;
+            border: 1px solid #eaeaea;
+            border-radius: 14px;
+            padding: 14px 22px;
+            transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .trust-pill:hover {
+            border-color: rgba(139, 0, 0, 0.3);
+            box-shadow: 0 6px 20px rgba(139, 0, 0, 0.08);
+            transform: translateY(-3px);
+        }
+
+        .trust-pill i {
+            color: var(--red);
+            font-size: 1.3rem;
+        }
+
+        /* ════════════════════════════════
+       FOOTER MINI
+       ════════════════════════════════ */
+        .foot {
+            background: var(--mid);
+            color: rgba(255, 255, 255, 0.55);
+            padding: 24px 20px;
+            text-align: center;
+            font-size: 0.88rem;
+        }
+
+        .foot a {
+            color: var(--red);
+        }
+
+        .foot a:hover {
+            text-decoration: underline;
+        }
+
+        /* ════════════════════════════════
+       FLYERS / CAMPAIGN MATERIALS
+       ════════════════════════════════ */
+        .flyers {
+            padding: 90px 0;
+            background: #fff;
+        }
+
+        .flyers-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.25fr;
+            gap: 30px;
+            margin-top: 40px;
+            align-items: stretch;
+        }
+
+        .flyer-card:nth-child(1) {
+            grid-row: 1 / span 2;
+        }
+
+        @media (max-width: 900px) {
+            .flyers-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .flyer-card:nth-child(1) {
+                grid-row: auto;
+            }
+        }
+
+        .flyer-card {
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s, z-index 0s;
+            position: relative;
+            background: #fff;
+            border: 1px solid rgba(0, 0, 0, 0.03);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .flyer-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 50px rgba(139, 0, 0, 0.15);
+            z-index: 10;
+        }
+
+        .flyer-card a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            padding: 15px;
+        }
+
+        .flyer-card img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .flyer-card:hover img {
+            transform: scale(1.03);
+        }
+
+        .flyer-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(139, 0, 0, 0.85);
+            /* Dark Red theme */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            z-index: 2;
+        }
+
+        .flyer-card:hover .flyer-overlay {
+            opacity: 1;
+        }
+
+        .flyer-overlay i {
+            font-size: 2.5rem;
+            margin-bottom: 14px;
+            transform: translateY(20px);
+            transition: transform 0.3s ease 0.1s;
+        }
+
+        .flyer-card:hover .flyer-overlay i {
+            transform: translateY(0);
+        }
+
+        .flyer-overlay span {
+            font-size: 1.1rem;
+            font-weight: 700;
+            transform: translateY(20px);
+            transition: transform 0.3s ease 0.15s;
+        }
+
+        .flyer-card:hover .flyer-overlay span {
+            transform: translateY(0);
+        }
+
+        /* ========================================
+       Complete Workflow Section Styles
+       ======================================== */
+
+        .workflow-section {
+            padding: 100px 0;
+            background: linear-gradient(180deg, #fff 0%, #f8f9fa 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .workflow-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1px;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent, rgba(139, 0, 0, 0.1), transparent);
+            z-index: 0;
+        }
+
+        /* Flow Tabs */
+        .flow-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 60px;
+            flex-wrap: wrap;
+        }
+
+        .flow-tab {
+            padding: 18px 40px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 2px solid transparent;
+            background: #fff;
+            color: #333;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .flow-tab::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .flow-tab:hover::before {
+            left: 100%;
+        }
+
+        .flow-tab i {
+            font-size: 1.3rem;
+            transition: transform 0.3s ease;
+        }
+
+        .flow-tab:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .flow-tab.active {
+            background: linear-gradient(135deg, #8B0000 0%, #610000 100%);
+            color: #fff;
+            border-color: transparent;
+            box-shadow: 0 15px 40px rgba(139, 0, 0, 0.35);
+        }
+
+        .flow-tab.active i {
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        /* Flow Content */
+        .flow-content {
+            display: none;
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .flow-content.active {
+            display: block;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Timeline Container */
+        .timeline-container {
+            position: relative;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 0 80px;
+        }
+
+        /* ========================================
+       SNAKE/SERPENTINE TIMELINE DESIGN
+       ======================================== */
+
+        /* Main Snake Body - SVG Based */
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 8px;
+            transform: translateX(-50%);
+            overflow: visible;
+        }
+
+        /* Snake Path with Gradient */
+        .timeline-line::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+            width: 8px;
+            height: 100%;
+            background: linear-gradient(180deg,
+                    #8B0000 0%,
+                    #ff3333 10%,
+                    #8B0000 20%,
+                    #ff6b6b 35%,
+                    #8B0000 50%,
+                    #ff3333 65%,
+                    #8B0000 80%,
+                    #20c997 95%,
+                    #28a745 100%);
+            border-radius: 50px;
+            box-shadow:
+                0 0 30px rgba(139, 0, 0, 0.4),
+                0 0 60px rgba(139, 0, 0, 0.2),
+                inset 0 0 10px rgba(255, 255, 255, 0.3);
+            animation: snakeGlow 3s ease-in-out infinite;
+        }
+
+        @keyframes snakeGlow {
+
+            0%,
+            100% {
+                box-shadow:
+                    0 0 30px rgba(139, 0, 0, 0.4),
+                    0 0 60px rgba(139, 0, 0, 0.2),
+                    inset 0 0 10px rgba(255, 255, 255, 0.3);
+            }
+
+            50% {
+                box-shadow:
+                    0 0 50px rgba(139, 0, 0, 0.6),
+                    0 0 100px rgba(139, 0, 0, 0.3),
+                    inset 0 0 15px rgba(255, 255, 255, 0.5);
+            }
+        }
+
+        /* Snake Scales Effect - Repeating Pattern */
+        .timeline-line::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 20px;
+            transform: translateX(-50%);
+            width: 20px;
+            height: calc(100% - 40px);
+            background:
+                repeating-linear-gradient(180deg,
+                    transparent 0px,
+                    transparent 8px,
+                    rgba(255, 255, 255, 0.15) 8px,
+                    rgba(255, 255, 255, 0.15) 12px,
+                    transparent 12px,
+                    transparent 20px);
+            border-radius: 50px;
+            z-index: 2;
+            animation: scalesMove 2s linear infinite;
+        }
+
+        @keyframes scalesMove {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: 0 40px;
+            }
+        }
+
+        /* Blood Drop Particles Flowing Down */
+        .timeline-container::before {
+            content: '💧';
+            position: absolute;
+            left: 50%;
+            top: 80px;
+            transform: translateX(-50%);
+            font-size: 14px;
+            animation: bloodFlow 4s ease-in-out infinite;
+            z-index: 5;
+            filter: hue-rotate(-20deg) saturate(2);
+        }
+
+        @keyframes bloodFlow {
+            0% {
+                top: 80px;
+                opacity: 0;
+                transform: translateX(-50%) scale(0.5);
+            }
+
+            10% {
+                opacity: 1;
+                transform: translateX(-50%) scale(1);
+            }
+
+            90% {
+                opacity: 1;
+                transform: translateX(-50%) scale(1);
+            }
+
+            100% {
+                top: calc(100% - 80px);
+                opacity: 0;
+                transform: translateX(-50%) scale(0.5);
+            }
+        }
+
+        /* Start Point - Glowing Heart */
+        .timeline-container .timeline-line+.timeline-item::before {
+            display: none;
+        }
+
+        /* Snake Head at Top */
+        .flow-content::before {
+            content: '❤️';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(145deg, #8B0000 0%, #ff2222 50%, #cc0000 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            border: 5px solid #fff;
+            box-shadow:
+                0 0 40px rgba(139, 0, 0, 0.7),
+                0 10px 30px rgba(0, 0, 0, 0.3),
+                inset 0 -5px 15px rgba(0, 0, 0, 0.2);
+            z-index: 20;
+            animation: heartPump 1.2s ease-in-out infinite;
+        }
+
+        @keyframes heartPump {
+
+            0%,
+            100% {
+                transform: translateX(-50%) scale(1);
+                box-shadow:
+                    0 0 40px rgba(139, 0, 0, 0.7),
+                    0 10px 30px rgba(0, 0, 0, 0.3);
+            }
+
+            15% {
+                transform: translateX(-50%) scale(1.15);
+                box-shadow:
+                    0 0 60px rgba(139, 0, 0, 0.9),
+                    0 15px 40px rgba(0, 0, 0, 0.4);
+            }
+
+            30% {
+                transform: translateX(-50%) scale(1);
+            }
+
+            45% {
+                transform: translateX(-50%) scale(1.08);
+            }
+        }
+
+        /* Snake Tail at Bottom - Success */
+        .timeline-container::after {
+            content: '✅';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(145deg, #28a745 0%, #20c997 50%, #17a2b8 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            border: 5px solid #fff;
+            box-shadow:
+                0 0 40px rgba(40, 167, 69, 0.7),
+                0 10px 30px rgba(0, 0, 0, 0.3),
+                inset 0 -5px 15px rgba(0, 0, 0, 0.2);
+            z-index: 20;
+            animation: successGlow 2s ease-in-out infinite;
+        }
+
+        @keyframes successGlow {
+
+            0%,
+            100% {
+                box-shadow:
+                    0 0 40px rgba(40, 167, 69, 0.7),
+                    0 10px 30px rgba(0, 0, 0, 0.3);
+            }
+
+            50% {
+                box-shadow:
+                    0 0 70px rgba(40, 167, 69, 0.9),
+                    0 15px 40px rgba(0, 0, 0, 0.4);
+            }
+        }
+
+        /* Curved Connectors from Timeline to Cards */
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg,
+                    rgba(139, 0, 0, 0.6),
+                    rgba(139, 0, 0, 0.2));
+            border-radius: 4px;
+            z-index: 0;
+        }
+
+        .timeline-item:nth-child(odd)::before {
+            transform: translateY(-50%) translateX(-100%);
+            background: linear-gradient(90deg,
+                    rgba(139, 0, 0, 0.2),
+                    rgba(139, 0, 0, 0.6));
+        }
+
+        .timeline-item:nth-child(even)::before {
+            transform: translateY(-50%);
+            background: linear-gradient(90deg,
+                    rgba(139, 0, 0, 0.6),
+                    rgba(139, 0, 0, 0.2));
+        }
+
+        /* ========================================
+       TIMELINE ITEMS
+       ======================================== */
+
+        .timeline-item {
+            position: relative;
+            padding: 35px 0;
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+
+        .timeline-item:nth-child(odd) {
+            flex-direction: row;
+        }
+
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        /* ========================================
+       STEP CARDS - Premium Design
+       ======================================== */
+
+        .step-card {
+            width: calc(50% - 70px);
+            background: linear-gradient(145deg, #ffffff 0%, #fafafa 100%);
+            border-radius: 28px;
+            padding: 35px 30px;
+            box-shadow:
+                0 20px 60px rgba(0, 0, 0, 0.08),
+                0 8px 25px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(139, 0, 0, 0.08);
+            position: relative;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Decorative Corner Accent */
+        .step-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(90deg, #8B0000, #ff6b6b, #8B0000);
+            background-size: 200% 100%;
+            opacity: 0;
+            transition: all 0.4s ease;
+            animation: gradientSlide 3s linear infinite paused;
+        }
+
+        @keyframes gradientSlide {
+            0% {
+                background-position: 0% 0%;
+            }
+
+            100% {
+                background-position: 200% 0%;
+            }
+        }
+
+        /* Subtle Background Pattern */
+        .step-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle, rgba(139, 0, 0, 0.03) 0%, transparent 70%);
+            border-radius: 50%;
+            transform: translate(30%, -30%);
+            pointer-events: none;
+        }
+
+        .step-card:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow:
+                0 30px 80px rgba(139, 0, 0, 0.15),
+                0 15px 40px rgba(0, 0, 0, 0.08);
+            border-color: rgba(139, 0, 0, 0.2);
+        }
+
+        .step-card:hover::before {
+            opacity: 1;
+            animation-play-state: running;
+        }
+
+        /* ========================================
+       STEP NODE - On Top of Timeline
+       ======================================== */
+
+        .step-node {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(145deg, #8B0000 0%, #ff3333 50%, #cc0000 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-weight: 800;
+            font-size: 1.5rem;
+            font-family: 'Outfit', sans-serif;
+            border: 6px solid #fff;
+            box-shadow:
+                0 0 0 4px rgba(139, 0, 0, 0.2),
+                0 15px 40px rgba(139, 0, 0, 0.5),
+                inset 0 -4px 10px rgba(0, 0, 0, 0.2),
+                inset 0 4px 10px rgba(255, 255, 255, 0.2);
+            z-index: 15;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .step-node::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: inherit;
+            z-index: -1;
+            animation: nodeRipple 2s ease-out infinite;
+            opacity: 0;
+        }
+
+        @keyframes nodeRipple {
+            0% {
+                transform: scale(1);
+                opacity: 0.5;
+            }
+
+            100% {
+                transform: scale(1.8);
+                opacity: 0;
+            }
+        }
+
+        .timeline-item:hover .step-node {
+            transform: translateX(-50%) scale(1.2) rotate(5deg);
+            box-shadow:
+                0 0 0 6px rgba(139, 0, 0, 0.3),
+                0 20px 50px rgba(139, 0, 0, 0.6),
+                inset 0 -4px 10px rgba(0, 0, 0, 0.2),
+                inset 0 4px 10px rgba(255, 255, 255, 0.3);
+        }
+
+        /* Step Header */
+        .step-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .step-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, rgba(139, 0, 0, 0.1) 0%, rgba(139, 0, 0, 0.05) 100%);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #8B0000;
+            font-size: 1.3rem;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .step-card:hover .step-icon {
+            background: #8B0000;
+            color: #fff;
+            transform: rotate(10deg) scale(1.1);
+        }
+
+        .step-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0;
+        }
+
+        .step-description {
+            color: #666;
+            line-height: 1.7;
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        /* Important Note Box */
+        .important-note {
+            background: linear-gradient(135deg, #fff5f5 0%, #ffe8e8 100%);
+            border-left: 4px solid #8B0000;
+            padding: 25px 30px;
+            border-radius: 12px;
+            margin-top: 50px;
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .important-note i {
+            font-size: 2rem;
+            color: #8B0000;
+            flex-shrink: 0;
+        }
+
+        .important-note-content h4 {
+            color: #8B0000;
+            font-weight: 700;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .important-note-content p {
+            color: #555;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* Flow Completion Badge */
+        .flow-complete {
+            text-align: center;
+            margin-top: 50px;
+            padding: 40px;
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            border-radius: 20px;
+            color: #fff;
+        }
+
+        .flow-complete i {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .flow-complete h4 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .flow-complete p {
+            opacity: 0.9;
+            margin: 0;
+        }
+
+        /* Trust Badge Section */
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 60px;
+            flex-wrap: wrap;
+        }
+
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 15px 25px;
+            background: #fff;
+            border-radius: 50px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+        }
+
+        .trust-badge i {
+            font-size: 1.5rem;
+            color: #8B0000;
+        }
+
+        .trust-badge span {
+            font-weight: 600;
+            color: #333;
+        }
+
+        /* ========================================
+       Mobile Responsive Styles for Workflow
+       ======================================== */
+
+        @media (max-width: 991px) {
+            .timeline-container {
+                padding: 50px 0 70px;
+            }
+
+            .timeline-line {
+                left: 35px;
+            }
+
+            .timeline-line::before {
+                left: 50%;
+                width: 6px;
+            }
+
+            /* Hide snake scales on mobile */
+            .timeline-line::after {
+                display: none;
+            }
+
+            /* Hide blood drop on mobile */
+            .timeline-container::before {
+                display: none;
+            }
+
+            .timeline-container::after {
+                left: 35px;
+                width: 44px;
+                height: 44px;
+                font-size: 18px;
+            }
+
+            .flow-content::before {
+                left: 35px;
+                width: 44px;
+                height: 44px;
+                font-size: 18px;
+            }
+
+            .timeline-item::before {
+                display: none;
+            }
+
+            .timeline-item,
+            .timeline-item:nth-child(odd),
+            .timeline-item:nth-child(even) {
+                flex-direction: column;
+                align-items: flex-start;
+                padding-left: 90px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+
+            .step-card {
+                width: 100%;
+            }
+
+            .step-node {
+                left: 35px;
+                width: 52px;
+                height: 52px;
+                font-size: 1.2rem;
+                border-width: 5px;
+                z-index: 15;
+            }
+
+            .step-node::before {
+                display: none;
+            }
+
+            .timeline-item:hover .step-node {
+                transform: translateX(-50%) scale(1.1);
+            }
+
+            .flow-tabs {
+                gap: 10px;
+            }
+
+            .flow-tab {
+                padding: 15px 25px;
+                font-size: 0.9rem;
+            }
+
+            .trust-badges {
+                gap: 20px;
+            }
+
+            .trust-badge {
+                padding: 12px 20px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .workflow-section {
+                padding: 50px 0;
+            }
+
+            .timeline-container {
+                padding: 40px 0 60px;
+            }
+
+            .timeline-line {
+                left: 22px;
+            }
+
+            .timeline-line::before {
+                width: 5px;
+            }
+
+            .timeline-container::after {
+                left: 22px;
+                width: 36px;
+                height: 36px;
+                font-size: 14px;
+                border-width: 4px;
+            }
+
+            .flow-content::before {
+                left: 22px;
+                width: 36px;
+                height: 36px;
+                font-size: 14px;
+                border-width: 4px;
+            }
+
+            .timeline-item,
+            .timeline-item:nth-child(odd),
+            .timeline-item:nth-child(even) {
+                padding-left: 65px;
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+
+            .step-node {
+                left: 22px;
+                width: 40px;
+                height: 40px;
+                font-size: 0.95rem;
+                border-width: 4px;
+                z-index: 15;
+            }
+
+            .step-card {
+                padding: 20px 16px;
+                border-radius: 16px;
+            }
+
+            .step-card::after {
+                display: none;
+            }
+
+            .step-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .step-icon {
+                width: 38px;
+                height: 38px;
+                font-size: 1rem;
+                border-radius: 12px;
+            }
+
+            .step-title {
+                font-size: 1rem;
+            }
+
+            .step-description {
+                font-size: 0.85rem;
+                line-height: 1.6;
+            }
+
+            .flow-tab {
+                width: 100%;
+                justify-content: center;
+                padding: 14px 16px;
+                font-size: 0.85rem;
+                gap: 8px;
+            }
+
+            .flow-tab i {
+                font-size: 1.1rem;
+            }
+
+            .important-note {
+                flex-direction: column;
+                padding: 16px;
+                gap: 12px;
+                border-radius: 10px;
+            }
+
+            .important-note i {
+                font-size: 1.3rem;
+            }
+
+            .important-note-content h4 {
+                font-size: 1rem;
+            }
+
+            .important-note-content p {
+                font-size: 0.85rem;
+            }
+
+            .trust-badge {
+                width: 100%;
+                justify-content: center;
+                padding: 10px 15px;
+                font-size: 0.85rem;
+                gap: 8px;
+            }
+
+            .trust-badge i {
+                font-size: 1.2rem;
+            }
+
+            .flow-complete {
+                padding: 22px 16px;
+                border-radius: 16px;
+            }
+
+            .flow-complete i {
+                font-size: 1.8rem;
+                margin-bottom: 10px;
+            }
+
+            .flow-complete h4 {
+                font-size: 1.1rem;
+                margin-bottom: 8px;
+            }
+
+            .flow-complete p {
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ══════════════════ NAVBAR ══════════════════ -->
+    <nav class="ad-nav">
+        <a href="../../bloodlink/" class="nav-logo">
+            <img src="../../assets/images/apps/blood-link-app/logo-bloodlink.png" alt="Blood Link Logo"
+                style="height: 42px; width: auto;">
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.familyandfellowsfoundation.org.bloodlink"
+            target="_blank" rel="noopener" class="btn-red" style="padding:10px 24px; font-size:0.9rem;">
+            <i class="fa-brands fa-google-play"></i> Download Free
+        </a>
+    </nav>
+
+    <!-- ══════════════════ HERO ══════════════════ -->
+    <section class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <div class="col-12 col-lg-6" data-aos="fade-right">
+                    <div class="hero-badge">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                        Emergency Blood Network – Pakistan
+                    </div>
+                    <h1 class="hero-title">
+                        Linking <span class="accent">Veins</span> Saving <span class="accent">Lives</span><br>
+
+                    </h1>
+                    <p class="hero-desc">
+                        Blood Link is a free Android app connecting blood donors and patients
+                        during emergencies. Available across Pakistan, expanding city by city.
+                    </p>
+                    <div class="hero-btns">
+                        <a href="https://play.google.com/store/apps/details?id=com.familyandfellowsfoundation.org.bloodlink"
+                            target="_blank" rel="noopener" class="btn-red">
+                            <i class="fa-brands fa-google-play"></i> Download Blood Link
+                        </a>
+                        <a href="https://api.whatsapp.com/send/?phone=923268484360&text=Hi,+I+want+to+register+as+a+blood+donor+on+Blood+Link."
+                            class="btn-outline">
+                            <i class="fa-solid fa-hand-holding-heart"></i> Ask Questions
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-6" data-aos="fade-left" data-aos-delay="150">
+                    <div class="hero-phone">
+                        <div class="phone-frame">
+                            <div class="phone-notch"></div>
+                            <div class="phone-screen">
+                                <img src="../../assets/images/apps/blood-link-app/donation-request-map-view.jpeg"
+                                    onerror="this.src='../../assets/images/hero-app-mockup.png'; this.onerror=null;"
+                                    alt="Blood Link Android App Preview - Map View">
+                            </div>
+                            <div class="phone-bar"></div>
+                        </div>
+                        <div class="phone-glow"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════ IMPACT STATS ══════════════════ -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-row">
+
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="0">
+                    <span class="stat-badge-pill">Nationwide</span>
+                    <div class="stat-num">250+</div>
+                    <div class="stat-lbl">Registered Donors</div>
+                </div>
+
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="80">
+                    <span class="stat-badge-pill">Active</span>
+                    <div class="stat-num">15+</div>
+                    <div class="stat-lbl">Active Volunteers</div>
+                </div>
+
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="160">
+                    <span class="stat-badge-pill">Campaigns</span>
+                    <div class="stat-num">2+</div>
+                    <div class="stat-lbl">Awareness Campaigns</div>
+                </div>
+
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="240">
+                    <span class="stat-badge-pill">Currently Active</span>
+                    <div class="stat-num small-text">ISB &amp;<br>RWP</div>
+                    <div class="stat-lbl">Expanding Soon</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════ HOW IT WORKS ══════════════════ -->
+    <!-- ==== Complete Workflow Section Start ==== -->
+    <section class="workflow-section" id="workflow">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-8">
+                    <div class="section__header text-center" style="margin-bottom: 50px;">
+                        <span class="sub-title-two" style="color: #8B0000;">Complete Journey</span>
+                        <h2 class="title-animation">How Blood Link Works</h2>
+                        <p
+                            style="color: #666; margin-top: 15px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                            Blood Link is a <strong>coordination layer</strong> — not a blood bank. All donations happen
+                            through
+                            verified hospitals and blood banks for safety and transparency.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flow Switcher Tabs -->
+            <div class="flow-tabs" data-aos="fade-up">
+                <button class="flow-tab active" data-flow="donor">
+                    <i class="fa-solid fa-hand-holding-droplet"></i>
+                    I Want to Donate
+                </button>
+                <button class="flow-tab" data-flow="recipient">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                    I Need Blood
+                </button>
+            </div>
+
+            <!-- ============================================
+             DONOR FLOW - 7 Steps
+             ============================================ -->
+            <div class="flow-content active" id="donor-flow">
+                <div class="timeline-container">
+                    <div class="timeline-line"></div>
+
+                    <!-- Step 1: Sign Up -->
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="step-node">1</div>
+                        <div class="step-card">
+                            <div class="step-header">
+                                <div class="step-icon">
+                                    <i class="fa-solid fa-user-plus"></i>
+                                </div>
+                                <h4 class="step-title">Sign Up</h4>
+                            </div>
+                            <p class="step-description">
+                                Create your account using <strong>Google</strong> or <strong>Email</strong>. Quick and
+                                secure
+                                authentication gets you started in seconds.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Complete Profile -->
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="150">
+                        <div class="step-node">2</div>
+                        <div class="step-card">
+                            <div class="step-header">
+                                <div class="step-icon">
+                                    <i class="fa-solid fa-droplet"></i>
+                                </div>
+                                <h4 class="step-title">Set Your Blood Group</h4>
+                            </div>
+                            <p class="step-description">
+                                Navigate to the <strong>Profile Tab</strong> and select your blood group. This enables
+                                smart matching
+                                with compatible requests nearby.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: View Nearby Requests -->
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="step-node">3</div>
+                        <div class="step-card">
+                            <div class="step-header">
+                                <div class="step-icon">
+                                    <i class="fa-solid fa-map-location-dot"></i>
+                                </div>
+                                <h4 class="step-title">View Nearby Requests</h4>
+                            </div>
+                            <p class="step-description">
+                                Browse verified blood requests within <strong>5km, 10km, or 20km</strong> radius. See
+                                urgency levels,
+                                blood type needed, and hospital location on an interactive map.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Accept Request -->
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="250">
+                        <div class="step-node">4</div>
+                        <div class="step-card">
+                            <div class="step-header">
+                                <div class="step-icon">
+                                    <i class="fa-solid fa-hospital"></i>
+                                </div>
+                                <h4 class="step-title">Accept &amp; Go to Hospital</h4>
+                            </div>
+                            <p class="step-description">
+                                Accept a request and proceed to the designated <strong>hospital or blood bank</strong>.
+                                You'll get
+                                directions and contact information for the facility.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 5: Donate & Upload Proof -->
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="step-node">5</div>
+                        <div class="step-card">
+                            <div class="step-header">
+                                <div class="step-icon">
+                                    <i class="fa-solid fa-camera"></i>
+                                </div>
+                                <h4 class="step-title">Upload Donation Proof</h4>
+                            </div>
+                            <p class="step-description">
+                                After donating at the hospital, upload <strong>proof of donation</strong> (hospital
+                                receipt,
+                                certificate, or photo). This ensures transparency and trust.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 6: Staff Review -->
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="350">
+                        <div class="step-node">6</div>
+                        <div class="step-card">
+                            <div class="step-header">
+                                <div class="step-icon">
+                                    <i class="fa-solid fa-clipboard-check"></i>
+                                </div>
+                                <h4 class="step-title">Staff Reviews &amp; Approves</h4>
+                            </div>
+                            <p class="step-description">
+                                Foundation staff verifies your donation proof within <strong>24-48 hours</strong>. Your
+                                approved
+                                donation is recorded permanently in your history.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 7: Profile Verified -->
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+                        <div class="step-node">7</div>
+                        <div class="step-card">
+                            <div class="step-header">
+                                <div class="step-icon">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                </div>
+                                <h4 class="step-title">Profile Auto-Verified</h4>
+                            </div>
+                            <p class="step-description">
+                                On your <strong>first verified donation</strong>, your profile receives a verified
+                                badge. Other donors
+                                can see your donation history if you ever need blood.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Donor Flow Completion -->
+                <div class="flow-complete" data-aos="zoom-in" data-aos-delay="450">
+                    <i class="fa-solid fa-trophy"></i>
+                    <h4>You're a Life Saver!</h4>
+                    <p>Your contribution is visible to the community. Keep donating to level up!</p>
+                </div>
+
+                <!-- Important Note for Donors -->
+                <div class="important-note" data-aos="fade-up" data-aos-delay="500">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <div class="important-note-content">
+                        <h4>Community Contribution Visibility</h4>
+                        <p>Your donation history and community contributions become visible to other verified donors. If
+                            you ever
+                            request blood, previous donors can see your track record — building trust through
+                            transparency.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============================================
+             RECIPIENT FLOW - 8 Steps
+             ============================================ -->
+            <div class="flow-content" id="recipient-flow">
+                <div class="timeline-container">
+                    <div class="timeline-line"></div>
+
+                    <!-- Step 1: Sign Up -->
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="step-node">1</div>
+                        <div class="step-card">
+                            <div class="step-header">
+                                <div class="step-icon">
+                                    <i class="fa-solid fa-user-plus"></i>
+                                </div>
+                                <h4 class="step-title">Sign Up</h4>
+                            </div>
+                            <p class="step-description">
+                                Create your account using <strong>Google</strong> or <strong>Email</strong> if you're a
+                                new user.
+                                Existing users can log in directly.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Complete Profile with ID -->
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="150">
+                        <div class="step-node">2</div>
+                        <div class="step-card">
+                            <div class="step-header">
+                                <div class="step-icon">
+                                    <i class="fa-solid fa-id-card"></i>
+                                </div>
+                                <h4 class="step-title">Complete Profile &amp; Verify ID</h4>
+                            </div>
+                            <p class="step-description">
+                                Submit a valid <strong>ID document</strong> for verification. This ID is securely
+                                reviewed and
+                                <strong>automatically deleted</strong> after verification to protect your privacy.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Submit Blood Request -->
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="step-node">3</div>
+                        <div class="step-card">
+                            <div class="step-header">
+                                <div class="step-icon">
+                                    <i class="fa-solid fa-file-medical"></i>
+                                </div>
+                                <h4 class="step-title">Submit Blood Request</h4>
+                            </div>
+                            <p class="step-description">
+                                Create a request for yourself or <strong>blood relatives only</strong>. You must attach
+                                the official
+                                <strong>Blood Requisition Form</strong> provided by the hospital.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Staff Reviews -->
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="250">
+                        <div class="step-node">4</div>
+                        <div class="step-card">
+                            <div class="step-header">
+                                <div class="step-icon">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </div>
+                                <h4 class="step-title">Staff Reviews Request</h4>
+                            </div>
+                            <p class="step-description">
+                                Foundation staff carefully reviews your documents. They <strong>recommend
+                                    approval</strong> based on
+                                the authenticity of submitted forms and urgency level.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 5: Request Goes Live -->
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="step-node">5</div>
+                        <div class="step-card">
+                            <div class="step-header">
+                                <div class="step-icon">
+                                    <i class="fa-solid fa-bell"></i>
+                                </div>
+                                <h4 class="step-title">Request Visible to Donors</h4>
+                            </div>
+                            <p class="step-description">
+                                After staff recommendation, your request becomes visible to <strong>nearby verified
+                                    donors</strong>.
+                                They receive push notifications based on blood type compatibility.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 6: Donor Accepts -->
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="350">
+                        <div class="step-node">6</div>
+                        <div class="step-card">
+                            <div class="step-header">
+                                <div class="step-icon">
+                                    <i class="fa-solid fa-handshake"></i>
+                                </div>
+                                <h4 class="step-title">Donor Accepts Request</h4>
+                            </div>
+                            <p class="step-description">
+                                When a donor accepts, you receive a <strong>notification</strong>. The donor proceeds to
+                                the hospital
+                                and donates blood. They upload proof after donation.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 7: Claim from Hospital -->
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+                        <div class="step-node">7</div>
+                        <div class="step-card">
+                            <div class="step-header">
+                                <div class="step-icon">
+                                    <i class="fa-solid fa-hospital-user"></i>
+                                </div>
+                                <h4 class="step-title">Claim Blood from Hospital</h4>
+                            </div>
+                            <p class="step-description">
+                                You're informed when the donation is complete. Proceed to the <strong>hospital or blood
+                                    bank</strong>
+                                to claim the blood using proper hospital protocols.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 8: Request Completed -->
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="450">
+                        <div class="step-node">8</div>
+                        <div class="step-card">
+                            <div class="step-header">
+                                <div class="step-icon">
+                                    <i class="fa-solid fa-check-double"></i>
+                                </div>
+                                <h4 class="step-title">Request Completed</h4>
+                            </div>
+                            <p class="step-description">
+                                Mark your request as complete. The entire transaction is logged, and both parties
+                                contribute to
+                                building the <strong>trusted donor community</strong>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recipient Flow Completion -->
+                <div class="flow-complete" data-aos="zoom-in" data-aos-delay="500">
+                    <i class="fa-solid fa-heart"></i>
+                    <h4>Request Fulfilled!</h4>
+                    <p>Thank you for trusting Blood Link. Consider becoming a donor to help others!</p>
+                </div>
+
+                <!-- Important Notes for Recipients -->
+                <div class="important-note" data-aos="fade-up" data-aos-delay="550">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    <div class="important-note-content">
+                        <h4>Blood Link is a Coordination Layer</h4>
+                        <p><strong>Important:</strong> Blood Link is NOT a blood bank. All donations happen exclusively
+                            through
+                            verified hospitals and blood banks. There is no direct contact between donors and recipients
+                            to prevent
+                            blood trafficking/selling. This ensures safety, traceability, and compliance with medical
+                            regulations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trust Badges -->
+            <div class="trust-badges" data-aos="fade-up" data-aos-delay="200">
+                <div class="trust-badge">
+                    <i class="fa-solid fa-shield-check"></i>
+                    <span>Verified Hospitals Only</span>
+                </div>
+                <div class="trust-badge">
+                    <i class="fa-solid fa-user-shield"></i>
+                    <span>No Direct Contact</span>
+                </div>
+                <div class="trust-badge">
+                    <i class="fa-solid fa-lock"></i>
+                    <span>Privacy Protected</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ==== / Complete Workflow Section End ==== -->
+
+    <!-- ══════════════════ CITY EXPANSION ══════════════════ -->
+    <section class="cities">
+        <div class="container">
+            <div class="text-center" data-aos="fade-up">
+                <div class="s-eyebrow" style="justify-content:center; color:rgba(215,35,35,0.85);"><span>Growing
+                        Fast</span></div>
+                <h2 class="s-title" style="color:#fff;">Blood Link is Growing<br>Across Pakistan</h2>
+                <p class="s-sub centered" style="color:rgba(255,255,255,0.6);">
+                    We started local. We're going national. Available nationwide for download and awareness
+                    participation.
+                </p>
+            </div>
+
+            <div class="cities-grid" data-aos="fade-up" data-aos-delay="100">
+                <div class="city-card active">
+                    <div class="city-emoji">🏙️</div>
+                    <div class="city-name">Islamabad</div>
+                    <span class="pill-active">✅ Active Now</span>
+                </div>
+                <div class="city-card active">
+                    <div class="city-emoji">🌆</div>
+                    <div class="city-name">Rawalpindi</div>
+                    <span class="pill-active">✅ Active Now</span>
+                </div>
+                <div class="city-card upcoming">
+                    <div class="city-emoji">🌇</div>
+                    <div class="city-name">Lahore</div>
+                    <span class="pill-soon">🚀 Coming Soon</span>
+                </div>
+                <div class="city-card upcoming">
+                    <div class="city-emoji">🌉</div>
+                    <div class="city-name">Karachi</div>
+                    <span class="pill-soon">🚀 Coming Soon</span>
+                </div>
+                <div class="city-card upcoming">
+                    <div class="city-emoji">🏔️</div>
+                    <div class="city-name">Peshawar</div>
+                    <span class="pill-soon">🚀 Coming Soon</span>
+                </div>
+            </div>
+
+            <div class="cities-footer" data-aos="fade-up" data-aos-delay="200">
+                <p>Available nationwide for download and awareness participation.</p>
+                <a href="https://api.whatsapp.com/send/?phone=923268484360&text=Hi,+I+want+to+bring+Blood+Link+to+my+city."
+                    class="btn-red">
+                    <i class="fa-solid fa-location-dot"></i> Bring Blood Link to Your City
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════ FLYERS ══════════════════ -->
+    <section class="flyers">
+        <div class="container">
+            <div class="text-center" data-aos="fade-up">
+                <div class="s-eyebrow" style="justify-content:center;"><span>Spread the Word</span></div>
+                <h2 class="s-title">Campaign Materials</h2>
+                <p class="s-sub centered">Download and share these flyers to help us build Pakistan's largest blood
+                    donor network.</p>
+            </div>
+
+            <div class="flyers-grid" data-aos="fade-up" data-aos-delay="100">
+                <div class="flyer-card">
+                    <a href="../../assets/images/apps/blood-link-app/flyer1.jpeg" target="_blank">
+                        <img src="../../assets/images/apps/blood-link-app/flyer1.jpeg" alt="Blood Link Flyer 1">
+                        <div class="flyer-overlay">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            <span>View Full Size</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="flyer-card">
+                    <a href="../../assets/images/apps/blood-link-app/flyer2.jpeg" target="_blank">
+                        <img src="../../assets/images/apps/blood-link-app/flyer2.jpeg" alt="Blood Link Flyer 2">
+                        <div class="flyer-overlay">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            <span>View Full Size</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="flyer-card">
+                    <a href="../../assets/images/apps/blood-link-app/flyer3.jpeg" target="_blank">
+                        <img src="../../assets/images/apps/blood-link-app/flyer3.jpeg" alt="Blood Link Flyer 3">
+                        <div class="flyer-overlay">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            <span>View Full Size</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════ COMMUNITY ══════════════════ -->
+    <section class="community">
+        <div class="container">
+            <div class="text-center" data-aos="fade-up">
+                <div class="s-eyebrow" style="justify-content:center;"><span>Everyone Can Help</span></div>
+                <h2 class="s-title">Not in Islamabad or Rawalpindi?</h2>
+                <p class="s-sub centered">You can still be part of Pakistan's largest blood donor community.</p>
+            </div>
+
+            <div class="contrib-grid" data-aos="fade-up" data-aos-delay="80">
+                <div class="c-card">
+                    <div class="c-icon"><i class="fa-solid fa-droplet"></i></div>
+                    <div class="c-title">Register as a Donor</div>
+                    <div class="c-desc">Join our national donor network and be ready when someone needs you most.</div>
+                </div>
+                <div class="c-card">
+                    <div class="c-icon"><i class="fa-solid fa-bullhorn"></i></div>
+                    <div class="c-title">Raise Awareness</div>
+                    <div class="c-desc">Share Blood Link in your city and help us grow to where people need us most.
+                    </div>
+                </div>
+                <div class="c-card">
+                    <div class="c-icon"><i class="fa-solid fa-calendar-check"></i></div>
+                    <div class="c-title">Organize a Drive</div>
+                    <div class="c-desc">Partner with us to host a blood donation drive in your community or institution.
+                    </div>
+                </div>
+                <div class="c-card">
+                    <div class="c-icon"><i class="fa-solid fa-handshake-angle"></i></div>
+                    <div class="c-title">Volunteer with FFF</div>
+                    <div class="c-desc">Join Family and Fellows Foundation as a volunteer and be part of a greater
+                        mission.</div>
+                </div>
+            </div>
+
+            <div class="community-footer" data-aos="fade-up">
+                <a href="https://api.whatsapp.com/send/?phone=923268484360&text=Hi,+I+want+to+become+a+volunteer+with+Family+and+Fellows+Foundation."
+                    class="btn-red">
+                    <i class="fa-solid fa-heart"></i> Become a Volunteer
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════ URGENCY ══════════════════ -->
+    <section class="urgency">
+        <div class="urgency-icon">❤️</div>
+        <h2 class="urgency-title">Every Minute Matters in Emergencies</h2>
+        <p class="urgency-sub">
+            If you are in Islamabad or Rawalpindi, install Blood Link today and help save lives.
+            It's free, it's fast, and it could make all the difference.
+        </p>
+        <a href="https://play.google.com/store/apps/details?id=com.familyandfellowsfoundation.org.bloodlink"
+            target="_blank" rel="noopener" class="btn-white">
+            <i class="fa-brands fa-google-play" style="font-size:1.3rem;"></i>
+            Download Now – Android
+        </a>
+    </section>
+
+    <!-- ══════════════════ TRUST ══════════════════ -->
+    <section class="trust">
+        <div class="container text-center">
+            <div class="s-eyebrow" style="justify-content:center;" data-aos="fade-up"><span>Trust &amp;
+                    Transparency</span></div>
+            <h2 class="s-title" data-aos="fade-up">You Can Trust Blood Link</h2>
+            <div class="trust-wrap" data-aos="fade-up" data-aos-delay="80">
+                <div class="trust-pill"><i class="fa-solid fa-building-ngo"></i> Operated by Family &amp; Fellows
+                    Foundation</div>
+                <div class="trust-pill"><i class="fa-solid fa-heart"></i> 100% Nonprofit Initiative</div>
+                <div class="trust-pill"><i class="fa-solid fa-tag"></i> Free to Use – Always</div>
+                <div class="trust-pill"><i class="fa-solid fa-shield-halved"></i> Privacy Protected</div>
+                <div class="trust-pill"><i class="fa-solid fa-ban"></i> No Ads / No Commercial Sales</div>
+                <div class="trust-pill">
+                    <i class="fa-solid fa-envelope"></i>
+                    <a href="mailto:info@familyandfellowsfoundation.org">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════ FOOTER ══════════════════ -->
+    <footer class="foot">
+        <img src="../../assets/images/apps/blood-link-app/logo-bloodlink.png" alt="Blood Link Logo"
+            style="height: 30px; margin: 0 auto 16px; opacity: 0.8;">
+        <p>
+            &copy; 2024
+            <a href="https://www.familyandfellowsfoundation.org/" target="_blank">Family &amp; Fellows Foundation</a>
+            &nbsp;·&nbsp;
+            <a href="../../privacy-policy/bloodlink-privacy-policy/">Privacy Policy</a>
+            &nbsp;·&nbsp;
+            <a href="../../terms-conditions/">Terms &amp; Conditions</a>
+            &nbsp;·&nbsp;
+            <a href="../../bloodlink/">Blood Link Main Page</a>
+        </p>
+    </footer>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 650, once: true, offset: 70 });
+    </script>
+    <!-- Workflow JS -->
+    <script>
+        // ========================================
+        const flowTabs = document.querySelectorAll('.flow-tab');
+        const flowContents = document.querySelectorAll('.flow-content');
+
+        flowTabs.forEach(tab => {
+            tab.addEventListener('click', function () {
+                const targetFlow = this.getAttribute('data-flow');
+
+                // Remove active class from all tabs and contents
+                flowTabs.forEach(t => t.classList.remove('active'));
+                flowContents.forEach(c => c.classList.remove('active'));
+
+                // Add active class to clicked tab
+                this.classList.add('active');
+
+                // Show corresponding content
+                const targetContent = document.getElementById(targetFlow + '-flow');
+                if (targetContent) {
+                    targetContent.classList.add('active');
+
+                    // Refresh AOS animations for the new content
+                    if (typeof AOS !== 'undefined') {
+                        setTimeout(() => {
+                            AOS.refresh();
+                        }, 100);
+                    }
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
